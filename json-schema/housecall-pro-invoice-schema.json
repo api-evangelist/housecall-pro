@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/housecall-pro/main/json-schema/housecall-pro-invoice-schema.json",
+  "title": "Housecall Pro Invoice",
+  "type": "object",
+  "required": ["id", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "invoice_number": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "sent", "paid", "voided", "canceled"]
+    },
+    "amount": { "type": "integer", "description": "Invoice amount in cents." },
+    "outstanding_balance": { "type": "integer" },
+    "customer_id": { "type": "string" },
+    "job_id": { "type": "string" },
+    "due_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

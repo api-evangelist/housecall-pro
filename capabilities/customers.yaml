@@ -1,0 +1,80 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Housecall Pro Public API — Customers
+  description: Housecall Pro Public API — Customers. CRUD operations against the /customers resource for managing
+    home services customers, contacts, and service addresses.
+  tags:
+  - Housecall Pro
+  - Customers
+  - Home Services
+  created: '2026-05-25'
+  modified: '2026-05-25'
+binds:
+- namespace: env
+  keys:
+    HOUSECALL_PRO_API_KEY: HOUSECALL_PRO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: customers
+    baseUri: https://api.housecallpro.com
+    description: Housecall Pro Customers business capability.
+    resources:
+    - name: customers
+      path: /customers
+      operations:
+      - name: listcustomers
+        method: GET
+        description: List Housecall Pro Customers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createcustomer
+        method: POST
+        description: Create A Housecall Pro Customer
+        outputRawFormat: json
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          required: true
+    - name: customer
+      path: /customers/{customer_id}
+      operations:
+      - name: getcustomer
+        method: GET
+        description: Get A Housecall Pro Customer
+        outputRawFormat: json
+        inputParameters:
+        - name: customer_id
+          in: path
+          type: string
+          required: true
+      - name: updatecustomer
+        method: PUT
+        description: Update A Housecall Pro Customer
+        outputRawFormat: json
+        inputParameters:
+        - name: customer_id
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          required: true
+      - name: deletecustomer
+        method: DELETE
+        description: Delete A Housecall Pro Customer
+        inputParameters:
+        - name: customer_id
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: 'Token {{env.HOUSECALL_PRO_API_KEY}}'
+      placement: header

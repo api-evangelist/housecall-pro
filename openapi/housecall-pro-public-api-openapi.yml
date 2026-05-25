@@ -1,0 +1,486 @@
+openapi: 3.1.0
+info:
+  title: Housecall Pro Public API
+  version: '1.0'
+  description: |
+    The Housecall Pro Public API exposes core resources of the Housecall Pro home services
+    business management platform — customers, leads, jobs, estimates, invoices, payments,
+    employees, schedule items, line items, and webhooks. The API is available to Pros on
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
+  contact:
+    name: Housecall Pro
+    url: https://www.housecallpro.com
+  license:
+    name: Proprietary
+servers:
+  - url: https://api.housecallpro.com
+    description: Production
+security:
+  - bearerAuth: []
+  - apiKey: []
+tags:
+  - name: Customers
+  - name: Leads
+  - name: Jobs
+  - name: Estimates
+  - name: Invoices
+  - name: Payments
+  - name: Employees
+  - name: Companies
+  - name: Schedule Items
+  - name: Line Items
+  - name: Webhooks
+paths:
+  /customers:
+    get:
+      tags: [Customers]
+      summary: List Customers
+      operationId: listCustomers
+      parameters:
+        - name: page
+          in: query
+          schema: { type: integer }
+        - name: page_size
+          in: query
+          schema: { type: integer }
+        - name: q
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: Customer collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  customers:
+                    type: array
+                    items: { $ref: '#/components/schemas/Customer' }
+    post:
+      tags: [Customers]
+      summary: Create Customer
+      operationId: createCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Customer' }
+      responses:
+        '201': { description: Customer created. }
+  /customers/{customer_id}:
+    get:
+      tags: [Customers]
+      summary: Get Customer
+      operationId: getCustomer
+      parameters:
+        - name: customer_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Single customer.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Customer' }
+    put:
+      tags: [Customers]
+      summary: Update Customer
+      operationId: updateCustomer
+      parameters:
+        - { name: customer_id, in: path, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Customer' }
+      responses:
+        '200': { description: Customer updated. }
+    delete:
+      tags: [Customers]
+      summary: Delete Customer
+      operationId: deleteCustomer
+      parameters:
+        - { name: customer_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Customer deleted. }
+  /leads:
+    get:
+      tags: [Leads]
+      summary: List Leads
+      operationId: listLeads
+      responses:
+        '200': { description: Lead collection. }
+    post:
+      tags: [Leads]
+      summary: Create Lead
+      operationId: createLead
+      responses:
+        '201': { description: Lead created. }
+  /jobs:
+    get:
+      tags: [Jobs]
+      summary: List Jobs
+      operationId: listJobs
+      parameters:
+        - { name: page, in: query, schema: { type: integer } }
+        - { name: page_size, in: query, schema: { type: integer } }
+        - { name: scheduled_start_min, in: query, schema: { type: string, format: date-time } }
+        - { name: scheduled_start_max, in: query, schema: { type: string, format: date-time } }
+        - { name: customer_id, in: query, schema: { type: string } }
+        - { name: employee_ids, in: query, schema: { type: array, items: { type: string } } }
+      responses:
+        '200':
+          description: Job collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobs:
+                    type: array
+                    items: { $ref: '#/components/schemas/Job' }
+    post:
+      tags: [Jobs]
+      summary: Create Job
+      operationId: createJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Job' }
+      responses:
+        '201': { description: Job created. }
+  /jobs/{job_id}:
+    get:
+      tags: [Jobs]
+      summary: Get Job
+      operationId: getJob
+      parameters:
+        - { name: job_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: Single job.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Job' }
+    put:
+      tags: [Jobs]
+      summary: Update Job
+      operationId: updateJob
+      parameters:
+        - { name: job_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: Job updated. }
+    delete:
+      tags: [Jobs]
+      summary: Delete Job
+      operationId: deleteJob
+      parameters:
+        - { name: job_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Job deleted. }
+  /jobs/{job_id}/line_items:
+    get:
+      tags: [Line Items]
+      summary: List Job Line Items
+      operationId: listJobLineItems
+      parameters:
+        - { name: job_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: Line item collection. }
+    post:
+      tags: [Line Items]
+      summary: Create Job Line Item
+      operationId: createJobLineItem
+      parameters:
+        - { name: job_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '201': { description: Line item created. }
+  /jobs/{job_id}/appointments:
+    get:
+      tags: [Schedule Items]
+      summary: List Job Appointments
+      operationId: listJobAppointments
+      parameters:
+        - { name: job_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: Appointment collection. }
+  /estimates:
+    get:
+      tags: [Estimates]
+      summary: List Estimates
+      operationId: listEstimates
+      responses:
+        '200':
+          description: Estimate collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  estimates:
+                    type: array
+                    items: { $ref: '#/components/schemas/Estimate' }
+    post:
+      tags: [Estimates]
+      summary: Create Estimate
+      operationId: createEstimate
+      responses:
+        '201': { description: Estimate created. }
+  /estimates/{estimate_id}:
+    get:
+      tags: [Estimates]
+      summary: Get Estimate
+      operationId: getEstimate
+      parameters:
+        - { name: estimate_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: Single estimate.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estimate' }
+  /invoices:
+    get:
+      tags: [Invoices]
+      summary: List Invoices
+      operationId: listInvoices
+      responses:
+        '200':
+          description: Invoice collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  invoices:
+                    type: array
+                    items: { $ref: '#/components/schemas/Invoice' }
+    post:
+      tags: [Invoices]
+      summary: Create Invoice
+      operationId: createInvoice
+      responses:
+        '201': { description: Invoice created. }
+  /invoices/{invoice_id}:
+    get:
+      tags: [Invoices]
+      summary: Get Invoice
+      operationId: getInvoice
+      parameters:
+        - { name: invoice_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: Single invoice.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Invoice' }
+  /invoices/{invoice_id}/payments:
+    get:
+      tags: [Payments]
+      summary: List Invoice Payments
+      operationId: listInvoicePayments
+      parameters:
+        - { name: invoice_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: Payment collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  payments:
+                    type: array
+                    items: { $ref: '#/components/schemas/Payment' }
+  /employees:
+    get:
+      tags: [Employees]
+      summary: List Employees
+      operationId: listEmployees
+      responses:
+        '200':
+          description: Employee collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  employees:
+                    type: array
+                    items: { $ref: '#/components/schemas/Employee' }
+  /employees/{employee_id}:
+    get:
+      tags: [Employees]
+      summary: Get Employee
+      operationId: getEmployee
+      parameters:
+        - { name: employee_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: Single employee.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Employee' }
+  /companies:
+    get:
+      tags: [Companies]
+      summary: List Companies
+      operationId: listCompanies
+      responses:
+        '200': { description: Company collection. }
+  /webhooks:
+    get:
+      tags: [Webhooks]
+      summary: List Webhook Subscriptions
+      operationId: listWebhooks
+      responses:
+        '200': { description: Webhook collection. }
+    post:
+      tags: [Webhooks]
+      summary: Create Webhook Subscription
+      operationId: createWebhook
+      responses:
+        '201': { description: Webhook subscription created. }
+  /webhooks/{webhook_id}:
+    delete:
+      tags: [Webhooks]
+      summary: Delete Webhook Subscription
+      operationId: deleteWebhook
+      parameters:
+        - { name: webhook_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Webhook deleted. }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
+      description: Bearer token using the API key generated from the MAX-plan App Store API card.
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key passed as `Authorization: Token {key}`.
+  schemas:
+    Customer:
+      type: object
+      properties:
+        id: { type: string }
+        first_name: { type: string }
+        last_name: { type: string }
+        email: { type: string, format: email }
+        mobile_number: { type: string }
+        home_number: { type: string }
+        work_number: { type: string }
+        company: { type: string }
+        notifications_enabled: { type: boolean }
+        lead_source: { type: string }
+        tags:
+          type: array
+          items: { type: string }
+        addresses:
+          type: array
+          items: { $ref: '#/components/schemas/Address' }
+        created_at: { type: string, format: date-time }
+        updated_at: { type: string, format: date-time }
+    Address:
+      type: object
+      properties:
+        id: { type: string }
+        type: { type: string, enum: [billing, service] }
+        street: { type: string }
+        street_line_2: { type: string }
+        city: { type: string }
+        state: { type: string }
+        zip: { type: string }
+        country: { type: string }
+    Job:
+      type: object
+      properties:
+        id: { type: string }
+        invoice_number: { type: string }
+        description: { type: string }
+        customer: { $ref: '#/components/schemas/Customer' }
+        address: { $ref: '#/components/schemas/Address' }
+        notes: { type: string }
+        work_status: { type: string, enum: [unscheduled, scheduled, in_progress, complete, completed_unrated, user_canceled, pro_canceled] }
+        work_timestamps:
+          type: object
+          properties:
+            on_my_way_at: { type: string, format: date-time }
+            started_at: { type: string, format: date-time }
+            completed_at: { type: string, format: date-time }
+        schedule:
+          type: object
+          properties:
+            scheduled_start: { type: string, format: date-time }
+            scheduled_end: { type: string, format: date-time }
+            arrival_window: { type: integer }
+        total_amount: { type: integer, description: Amount in cents. }
+        outstanding_balance: { type: integer }
+        assigned_employees:
+          type: array
+          items: { $ref: '#/components/schemas/Employee' }
+        tags:
+          type: array
+          items: { type: string }
+        created_at: { type: string, format: date-time }
+        updated_at: { type: string, format: date-time }
+    Estimate:
+      type: object
+      properties:
+        id: { type: string }
+        estimate_number: { type: string }
+        work_status: { type: string }
+        customer: { $ref: '#/components/schemas/Customer' }
+        address: { $ref: '#/components/schemas/Address' }
+        total_amount: { type: integer }
+        approval_status: { type: string, enum: [pro_approved, customer_approved, declined, pending] }
+        options:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              name: { type: string }
+              total_amount: { type: integer }
+        created_at: { type: string, format: date-time }
+    Invoice:
+      type: object
+      properties:
+        id: { type: string }
+        invoice_number: { type: string }
+        status: { type: string, enum: [draft, sent, paid, voided, canceled] }
+        amount: { type: integer }
+        outstanding_balance: { type: integer }
+        customer_id: { type: string }
+        job_id: { type: string }
+        due_at: { type: string, format: date-time }
+        created_at: { type: string, format: date-time }
+    Payment:
+      type: object
+      properties:
+        id: { type: string }
+        invoice_id: { type: string }
+        amount: { type: integer }
+        payment_method: { type: string, enum: [cash, check, credit_card, ach, other] }
+        status: { type: string, enum: [succeeded, pending, failed, refunded] }
+        processed_at: { type: string, format: date-time }
+    Employee:
+      type: object
+      properties:
+        id: { type: string }
+        first_name: { type: string }
+        last_name: { type: string }
+        email: { type: string, format: email }
+        mobile_number: { type: string }
+        role: { type: string, enum: [admin, office_staff, field_tech] }
+        color_hex: { type: string }
+        avatar_url: { type: string }
+        permissions:
+          type: object
+          additionalProperties: { type: boolean }

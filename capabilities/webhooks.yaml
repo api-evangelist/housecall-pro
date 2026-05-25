@@ -1,0 +1,53 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Housecall Pro Public API — Webhooks
+  description: Housecall Pro Public API — Webhooks. Subscribe to and manage webhook subscriptions for customer,
+    estimate, invoice, job, lead, and payment events. Includes a signing secret for verifying payload authenticity.
+  tags:
+  - Housecall Pro
+  - Webhooks
+  - Events
+  - EventDriven
+  created: '2026-05-25'
+  modified: '2026-05-25'
+binds:
+- namespace: env
+  keys:
+    HOUSECALL_PRO_API_KEY: HOUSECALL_PRO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: webhooks
+    baseUri: https://api.housecallpro.com
+    description: Housecall Pro Webhooks management capability.
+    resources:
+    - name: webhooks
+      path: /webhooks
+      operations:
+      - name: listwebhooks
+        method: GET
+        description: List Housecall Pro Webhook Subscriptions
+      - name: createwebhook
+        method: POST
+        description: Create A Housecall Pro Webhook Subscription
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          required: true
+    - name: webhook
+      path: /webhooks/{webhook_id}
+      operations:
+      - name: deletewebhook
+        method: DELETE
+        description: Delete A Housecall Pro Webhook Subscription
+        inputParameters:
+        - name: webhook_id
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: 'Token {{env.HOUSECALL_PRO_API_KEY}}'
+      placement: header

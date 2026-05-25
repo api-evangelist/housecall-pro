@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/housecall-pro/main/json-schema/housecall-pro-customer-schema.json",
+  "title": "Housecall Pro Customer",
+  "description": "A customer record in the Housecall Pro home services management platform.",
+  "type": "object",
+  "required": ["id"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique customer identifier." },
+    "first_name": { "type": "string" },
+    "last_name": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "mobile_number": { "type": "string" },
+    "home_number": { "type": "string" },
+    "work_number": { "type": "string" },
+    "company": { "type": "string" },
+    "notifications_enabled": { "type": "boolean" },
+    "lead_source": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string", "enum": ["billing", "service"] },
+          "street": { "type": "string" },
+          "street_line_2": { "type": "string" },
+          "city": { "type": "string" },
+          "state": { "type": "string" },
+          "zip": { "type": "string" },
+          "country": { "type": "string" }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

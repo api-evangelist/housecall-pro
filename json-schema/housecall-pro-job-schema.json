@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/housecall-pro/main/json-schema/housecall-pro-job-schema.json",
+  "title": "Housecall Pro Job",
+  "description": "A scheduled home services job tracked in Housecall Pro.",
+  "type": "object",
+  "required": ["id", "work_status"],
+  "properties": {
+    "id": { "type": "string" },
+    "invoice_number": { "type": "string" },
+    "description": { "type": "string" },
+    "notes": { "type": "string" },
+    "work_status": {
+      "type": "string",
+      "enum": [
+        "unscheduled",
+        "scheduled",
+        "in_progress",
+        "complete",
+        "completed_unrated",
+        "user_canceled",
+        "pro_canceled"
+      ]
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "scheduled_start": { "type": "string", "format": "date-time" },
+        "scheduled_end": { "type": "string", "format": "date-time" },
+        "arrival_window": { "type": "integer", "description": "Arrival window in seconds." }
+      }
+    },
+    "work_timestamps": {
+      "type": "object",
+      "properties": {
+        "on_my_way_at": { "type": "string", "format": "date-time" },
+        "started_at": { "type": "string", "format": "date-time" },
+        "completed_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "total_amount": { "type": "integer", "description": "Total amount in cents." },
+    "outstanding_balance": { "type": "integer" },
+    "customer_id": { "type": "string" },
+    "assigned_employee_ids": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

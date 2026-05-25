@@ -1,0 +1,140 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Housecall Pro
+providerId: housecall-pro
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - Home Services
+  - Field Service Management
+  - SaaS
+description: 'Reconciled plans and pricing for the Housecall Pro home services management platform. API access requires the MAX plan. Source: housecallpro.com/pricing.'
+sources:
+  - https://www.housecallpro.com/pricing/
+  - https://help.housecallpro.com/en/articles/8505035-api-overview
+plans:
+  - id: housecall-pro-basic
+    name: Basic
+    type: tiered
+    description: Single-user plan with online booking, scheduling, invoicing, payments, and review management. No API access.
+    entries:
+      - label: Annual price per month
+        name: annual
+        type: recurring
+        metric: user
+        limit: 1
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '59.00'
+        userMultiplied: false
+      - label: Monthly price
+        name: monthly
+        type: recurring
+        metric: user
+        limit: 1
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '79.00'
+        userMultiplied: false
+    elements:
+      - Online booking
+      - Invoices and payments
+      - Scheduling and dispatching
+      - Quotes and proposals
+      - Review management
+      - Job cost tracking
+      - Price book
+      - Customer communication
+  - id: housecall-pro-essentials
+    name: Essentials
+    type: tiered
+    description: Up to 5 users. Adds QuickBooks integration, GPS tracking, postcard/email marketing, equipment tracking, checklists. No API access.
+    entries:
+      - label: Annual price per month
+        name: annual
+        type: recurring
+        metric: account
+        limit: 5
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '149.00'
+        userMultiplied: false
+      - label: Monthly price
+        name: monthly
+        type: recurring
+        metric: account
+        limit: 5
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '189.00'
+        userMultiplied: false
+    elements:
+      - Everything in Basic
+      - QuickBooks integration
+      - Postcard and email marketing
+      - Customer equipment tracking
+      - Premium review management
+      - Visual price book
+      - Employee GPS tracking
+      - Checklists
+  - id: housecall-pro-max
+    name: MAX
+    type: tiered
+    description: Up to 8 users. Includes public API access, webhooks, advanced custom reporting, recurring service plans, and dedicated onboarding. Required for any developer integration.
+    entries:
+      - label: Annual price per month
+        name: annual
+        type: recurring
+        metric: account
+        limit: 8
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '299.00'
+        userMultiplied: false
+      - label: Monthly price
+        name: monthly
+        type: recurring
+        metric: account
+        limit: 8
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '329.00'
+        userMultiplied: false
+      - label: Additional user
+        name: extra-user
+        type: recurring
+        metric: user
+        limit: -1
+        timeFrame: month
+        geo: US
+        unit: 1
+        price: '35.00'
+        userMultiplied: true
+    elements:
+      - Everything in Essentials
+      - Public REST API access
+      - Webhook subscriptions
+      - Advanced custom reporting
+      - Recurring service plans
+      - Sales proposal tool
+      - Dedicated onboarding specialist
+      - Escalated phone support
+addOns:
+  - name: Sales Proposals
+    price: '40.00'
+    timeFrame: month
+  - name: Vehicle GPS
+    price: '20.00'
+    timeFrame: month
+    note: Per vehicle.
+  - name: Premium Price Book
+    price: '149.00'
+    timeFrame: month

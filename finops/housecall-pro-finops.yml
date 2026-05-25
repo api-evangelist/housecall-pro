@@ -1,0 +1,72 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Housecall Pro
+providerId: housecall-pro
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - FinOps
+  - SaaS
+  - Field Service Management
+  - Home Services
+description: FOCUS-aligned FinOps definition for Housecall Pro. Subscription-based SaaS with per-seat overages, with an add-on marketplace and payment-processing pass-through fees.
+sources:
+  - https://www.housecallpro.com/pricing/
+  - https://help.housecallpro.com/en/articles/8505035-api-overview
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Housecall Pro
+serviceCategory: Business Applications
+billingModel:
+  pricingCategory: Subscription
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Credit
+  primaryUnit: seat
+  secondaryUnits:
+    - vehicle
+    - transaction
+focusColumns:
+  ServiceName: Housecall Pro
+  ServiceCategory: Business Applications
+  ProviderName: Housecall Pro
+  PublisherName: Housecall Pro
+  InvoiceIssuerName: Housecall Pro
+  PricingCategory: Subscription
+  PricingUnit: seat-month
+  BillingCurrency: USD
+meters:
+  - name: seat_subscription
+    unit: seat-month
+    aggregation: sum
+    dimensions:
+      - plan
+      - billing_period
+  - name: additional_seats
+    unit: seat-month
+    aggregation: sum
+    dimensions:
+      - plan
+  - name: vehicle_gps
+    unit: vehicle-month
+    aggregation: sum
+  - name: payment_processing_fees
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - card_type
+      - payment_method
+notes:
+  - API access is included only in the MAX plan; downgrading revokes API keys.
+  - Payment processing fees are pass-through (interchange + Housecall Pro Pay markup).
+  - Annual billing offers a roughly 25 percent discount versus monthly billing.

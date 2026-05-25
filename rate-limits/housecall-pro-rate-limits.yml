@@ -1,0 +1,28 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Housecall Pro
+providerId: housecall-pro
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: false
+tags:
+  - Home Services
+  - Rate Limiting
+description: |
+  Housecall Pro does not publish specific request-rate or quota numbers in its public
+  Stoplight documentation. The platform enforces internal throttling and reserves the
+  right to throttle abusive clients. API access itself is gated by the MAX plan.
+sources:
+  - https://docs.housecallpro.com/
+  - https://help.housecallpro.com/en/articles/8505035-api-overview
+algorithm: undisclosed
+notes:
+  - API access is restricted to Pros on the MAX plan.
+  - Housecall Pro does not provide dedicated developer support.
+  - Deleting an API key immediately breaks any active integration using it.
+  - Webhook subscribers should respond within 10 seconds or risk delivery retries.
+limits: []
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
