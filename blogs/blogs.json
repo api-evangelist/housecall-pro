@@ -2,17 +2,17 @@
   "repo": "housecall-pro",
   "feeds": [
     {
-      "source": "https://www.housecallpro.com/resources/",
+      "source": "https://www.housecallpro.com/feed/",
       "feed_url": "https://www.housecallpro.com/feed/",
       "title": "",
-      "saved": 2,
-      "method": "discovered"
+      "saved": 6,
+      "method": "feed"
     },
     {
       "source": "https://pro.housecallpro.com/pro/login",
       "error": "HTTPError"
     }
   ],
-  "post_count": 3,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 12,
+  "fetched": "2026-06-27T12:03:07Z"
 }

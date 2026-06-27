@@ -82,7 +82,7 @@ common:
     url: https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog
   - type: Pricing
     url: https://www.housecallpro.com/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://www.housecallpro.com/free-trial/
   - type: Login
     url: https://pro.housecallpro.com/pro/login
@@ -118,7 +118,7 @@ common:
     url: https://apps.apple.com/us/app/housecall-pro/id814134276
   - type: AppStoreAndroid
     url: https://play.google.com/store/apps/details?id=com.housecallpro.app
-  - type: Forum
+  - type: Forums
     url: https://www.facebook.com/groups/superprocommunity/
   - type: Plans
     url: plans/housecall-pro-plans-pricing.yml
