@@ -66,6 +66,8 @@ kind: contract
 image: https://static-assets.housecallpro.com/brand/logos/square-door-only.svg
 access: 3rd-Party
 common:
+  - type: DomainSecurity
+    url: security/housecall-pro-domain-security.yml
   - type: Portal
     url: https://www.housecallpro.com
   - type: Documentation
