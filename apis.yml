@@ -63,9 +63,23 @@ tags:
   - Pest Control
   - SaaS
 kind: contract
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://static-assets.housecallpro.com/brand/logos/square-door-only.svg
 access: 3rd-Party
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/housecall-pro/overview
   - type: DomainSecurity
     url: security/housecall-pro-domain-security.yml
   - type: Portal
