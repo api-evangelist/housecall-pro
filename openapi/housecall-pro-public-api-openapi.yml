@@ -364,7 +364,7 @@ components:
       type: apiKey
       in: header
       name: Authorization
-      description: API key passed as `Authorization: Token {key}`.
+      description: "API key passed as `Authorization: Token {key}`."
   schemas:
     Customer:
       type: object
