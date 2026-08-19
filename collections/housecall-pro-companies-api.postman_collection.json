@@ -1,0 +1,106 @@
+{
+  "item": [
+    {
+      "id": "9726cad1-8df3-4d36-97f4-66d64380caab",
+      "name": "Companies",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bfe99d2f-1bce-41d6-92fe-68551b41ccdb",
+          "name": "List Companies",
+          "request": {
+            "name": "List Companies",
+            "description": {},
+            "url": {
+              "path": [
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "00d6e98b-a20d-4fa8-9840-bace5538d8ac",
+              "name": "Company collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.housecallpro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "43c26c02-f538-4565-bc7f-3d4d405c8158",
+    "name": "Housecall Pro Public Companies API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Housecall Pro Public API exposes core resources of the Housecall Pro home services\nbusiness management platform — customers, leads, jobs, estimates, invoices, payments,\nemployees, schedule items, line items, and webhooks. The API is available to Pros on\nthe MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.\n\n\nContact Support:\n Name: Housecall Pro",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "item": [
+    {
+      "id": "e430c140-7fb0-45d1-88e4-330090956878",
+      "name": "Customers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4050f3a6-f6fe-457a-8e3b-22ae387cf278",
+          "name": "List Customers",
+          "request": {
+            "name": "List Customers",
+            "description": {},
+            "url": {
+              "path": [
+                "customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef450201-932a-4360-8f80-341cf7545981",
+              "name": "Customer collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"customers\": [\n    {\n      \"id\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"email\": \"0YI60z@kWRsPBXwPceBfsafARNggslexayz.vh\",\n      \"mobile_number\": \"string\",\n      \"home_number\": \"string\",\n      \"work_number\": \"string\",\n      \"company\": \"string\",\n      \"notifications_enabled\": true,\n      \"lead_source\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"addresses\": [\n        {\n          \"id\": \"string\",\n          \"type\": \"service\",\n          \"street\": \"string\",\n          \"street_line_2\": \"string\",\n          \"city\": \"string\",\n          \"state\": \"string\",\n          \"zip\": \"string\",\n          \"country\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"type\": \"service\",\n          \"street\": \"string\",\n          \"street_line_2\": \"string\",\n          \"city\": \"string\",\n          \"state\": \"string\",\n          \"zip\": \"string\",\n          \"country\": \"string\"\n        }\n      ],\n      \"created_at\": \"1999-09-20T12:30:28.154Z\",\n      \"updated_at\": \"1994-10-25T10:02:46.574Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"email\": \"oZCLgPKM0@RLXRJHQJsIFdiqcaIunyJR.iilk\",\n      \"mobile_number\": \"string\",\n      \"home_number\": \"string\",\n      \"work_number\": \"string\",\n      \"company\": \"string\",\n      \"notifications_enabled\": true,\n      \"lead_source\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"addresses\": [\n        {\n          \"id\": \"string\",\n          \"type\": \"billing\",\n          \"street\": \"string\",\n          \"street_line_2\": \"string\",\n          \"city\": \"string\",\n          \"state\": \"string\",\n          \"zip\": \"string\",\n          \"country\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"type\": \"service\",\n          \"street\": \"string\",\n          \"street_line_2\": \"string\",\n          \"city\": \"string\",\n          \"state\": \"string\",\n          \"zip\": \"string\",\n          \"country\": \"string\"\n        }\n      ],\n      \"created_at\": \"1967-12-19T22:55:36.503Z\",\n      \"updated_at\": \"1952-03-21T14:00:50.043Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a646cae7-8ae7-41dc-94e5-d2dbefff5443",
+          "name": "Create Customer",
+          "request": {
+            "name": "Create Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"mobile_number\": \"<string>\",\n  \"home_number\": \"<string>\",\n  \"work_number\": \"<string>\",\n  \"company\": \"<string>\",\n  \"notifications_enabled\": \"<boolean>\",\n  \"lead_source\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    }\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c7fde75e-87c1-45e4-a561-3c4496cefba8",
+              "name": "Customer created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"mobile_number\": \"<string>\",\n  \"home_number\": \"<string>\",\n  \"work_number\": \"<string>\",\n  \"company\": \"<string>\",\n  \"notifications_enabled\": \"<boolean>\",\n  \"lead_source\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    }\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9a5582f9-2eca-43ac-94eb-1bfcc411fb54",
+          "name": "Get Customer",
+          "request": {
+            "name": "Get Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "customers",
+                ":customer_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customer_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95769946-5d38-4934-bc99-9c69d1831d04",
+              "name": "Single customer.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers",
+                    ":customer_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customer_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"mobile_number\": \"<string>\",\n  \"home_number\": \"<string>\",\n  \"work_number\": \"<string>\",\n  \"company\": \"<string>\",\n  \"notifications_enabled\": \"<boolean>\",\n  \"lead_source\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    }\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1ee63840-ed12-4904-9a32-25b9bbfe1a5e",
+          "name": "Update Customer",
+          "request": {
+            "name": "Update Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "customers",
+                ":customer_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customer_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"mobile_number\": \"<string>\",\n  \"home_number\": \"<string>\",\n  \"work_number\": \"<string>\",\n  \"company\": \"<string>\",\n  \"notifications_enabled\": \"<boolean>\",\n  \"lead_source\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    }\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dd4bcb7f-3f87-4220-a3c5-7273f5443b14",
+              "name": "Customer updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers",
+                    ":customer_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customer_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"mobile_number\": \"<string>\",\n  \"home_number\": \"<string>\",\n  \"work_number\": \"<string>\",\n  \"company\": \"<string>\",\n  \"notifications_enabled\": \"<boolean>\",\n  \"lead_source\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"street\": \"<string>\",\n      \"street_line_2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"country\": \"<string>\"\n    }\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ec7fef19-bde1-430f-a621-fa3d9398943f",
+          "name": "Delete Customer",
+          "request": {
+            "name": "Delete Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "customers",
+                ":customer_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customer_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9887b80a-980b-41f8-878f-e0c91475836c",
+              "name": "Customer deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers",
+                    ":customer_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customer_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.housecallpro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "538a65b4-8e57-45e6-99c2-8a24d7c3f095",
+    "name": "Housecall Pro Public Customers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Housecall Pro Public API exposes core resources of the Housecall Pro home services\nbusiness management platform — customers, leads, jobs, estimates, invoices, payments,\nemployees, schedule items, line items, and webhooks. The API is available to Pros on\nthe MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.\n\n\nContact Support:\n Name: Housecall Pro",
+      "type": "text/plain"
+    }
+  }
+}

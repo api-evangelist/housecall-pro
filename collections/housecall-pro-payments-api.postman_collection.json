@@ -1,0 +1,136 @@
+{
+  "item": [
+    {
+      "id": "e0c50632-04d4-4c6f-ac75-1265d59a726d",
+      "name": "Payments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "35ccfbd2-a476-4ba6-860f-890dc64ee634",
+          "name": "List Invoice Payments",
+          "request": {
+            "name": "List Invoice Payments",
+            "description": {},
+            "url": {
+              "path": [
+                "invoices",
+                ":invoice_id",
+                "payments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "invoice_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a57f2528-4355-4a24-ae7b-1ca8adb042c8",
+              "name": "Payment collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invoices",
+                    ":invoice_id",
+                    "payments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "invoice_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"payments\": [\n    {\n      \"id\": \"string\",\n      \"invoice_id\": \"string\",\n      \"amount\": 8090,\n      \"payment_method\": \"check\",\n      \"status\": \"refunded\",\n      \"processed_at\": \"1950-04-17T16:18:25.507Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"invoice_id\": \"string\",\n      \"amount\": 789,\n      \"payment_method\": \"other\",\n      \"status\": \"succeeded\",\n      \"processed_at\": \"1964-05-11T02:40:57.491Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.housecallpro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e6054e51-25a5-40d1-b5ba-36debb54a15c",
+    "name": "Housecall Pro Public Payments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Housecall Pro Public API exposes core resources of the Housecall Pro home services\nbusiness management platform — customers, leads, jobs, estimates, invoices, payments,\nemployees, schedule items, line items, and webhooks. The API is available to Pros on\nthe MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.\n\n\nContact Support:\n Name: Housecall Pro",
+      "type": "text/plain"
+    }
+  }
+}

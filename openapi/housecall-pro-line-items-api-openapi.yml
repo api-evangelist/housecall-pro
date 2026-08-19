@@ -1,0 +1,68 @@
+openapi: 3.2.0
+info:
+  title: Housecall Pro Public Line Items API
+  version: '1.0'
+  description: 'The Housecall Pro Public API exposes core resources of the Housecall Pro home services
+
+    business management platform — customers, leads, jobs, estimates, invoices, payments,
+
+    employees, schedule items, line items, and webhooks. The API is available to Pros on
+
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
+
+    '
+  contact:
+    name: Housecall Pro
+    url: https://www.housecallpro.com
+  license:
+    name: Proprietary
+servers:
+- url: https://api.housecallpro.com
+  description: Production
+security:
+- bearerAuth: []
+- apiKey: []
+tags:
+- name: Line Items
+paths:
+  /jobs/{job_id}/line_items:
+    get:
+      tags:
+      - Line Items
+      summary: List Job Line Items
+      operationId: listJobLineItems
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Line item collection.
+    post:
+      tags:
+      - Line Items
+      summary: Create Job Line Item
+      operationId: createJobLineItem
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Line item created.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
+      description: Bearer token using the API key generated from the MAX-plan App Store API card.
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API key passed as `Authorization: Token {key}`.'

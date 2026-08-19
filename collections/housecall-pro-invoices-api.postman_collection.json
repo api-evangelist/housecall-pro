@@ -1,0 +1,274 @@
+{
+  "item": [
+    {
+      "id": "b2c6a0f3-7b92-44d1-a63a-105aed0327a5",
+      "name": "Invoices",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68a432c5-8776-4a62-b49e-9979a094701f",
+          "name": "List Invoices",
+          "request": {
+            "name": "List Invoices",
+            "description": {},
+            "url": {
+              "path": [
+                "invoices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "259cc4a4-5784-4c55-b3b6-d0c57ccf5fb5",
+              "name": "Invoice collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invoices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"invoices\": [\n    {\n      \"id\": \"string\",\n      \"invoice_number\": \"string\",\n      \"status\": \"draft\",\n      \"amount\": 5478,\n      \"outstanding_balance\": 7353,\n      \"customer_id\": \"string\",\n      \"job_id\": \"string\",\n      \"due_at\": \"1951-02-28T18:23:32.730Z\",\n      \"created_at\": \"1967-12-27T14:13:58.285Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"invoice_number\": \"string\",\n      \"status\": \"canceled\",\n      \"amount\": 1005,\n      \"outstanding_balance\": 6674,\n      \"customer_id\": \"string\",\n      \"job_id\": \"string\",\n      \"due_at\": \"2001-03-15T23:32:05.799Z\",\n      \"created_at\": \"1981-07-27T22:01:51.243Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b5e26e71-27d0-40ff-b90d-9d79c55d9322",
+          "name": "Create Invoice",
+          "request": {
+            "name": "Create Invoice",
+            "description": {},
+            "url": {
+              "path": [
+                "invoices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "28e7f4a6-165a-42df-9be2-62cfd90007d0",
+              "name": "Invoice created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invoices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db9c8369-e989-4988-8f35-c039d0e31533",
+          "name": "Get Invoice",
+          "request": {
+            "name": "Get Invoice",
+            "description": {},
+            "url": {
+              "path": [
+                "invoices",
+                ":invoice_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "invoice_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "99e64146-7872-4784-9829-d688247684e9",
+              "name": "Single invoice.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invoices",
+                    ":invoice_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "invoice_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"invoice_number\": \"string\",\n  \"status\": \"paid\",\n  \"amount\": 735,\n  \"outstanding_balance\": 892,\n  \"customer_id\": \"string\",\n  \"job_id\": \"string\",\n  \"due_at\": \"1990-04-19T19:54:39.218Z\",\n  \"created_at\": \"1948-08-02T13:42:44.130Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.housecallpro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1d360384-2d53-408c-a074-34392c27a9d4",
+    "name": "Housecall Pro Public Invoices API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Housecall Pro Public API exposes core resources of the Housecall Pro home services\nbusiness management platform — customers, leads, jobs, estimates, invoices, payments,\nemployees, schedule items, line items, and webhooks. The API is available to Pros on\nthe MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.\n\n\nContact Support:\n Name: Housecall Pro",
+      "type": "text/plain"
+    }
+  }
+}

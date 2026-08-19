@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Housecall Pro Public Line Items API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Line Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Job Line Items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.housecallpro.com/jobs/:job_id/line_items",
+            "params": [
+              {
+                "name": "job_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List Job Line Items"
+        },
+        {
+          "info": {
+            "name": "Create Job Line Item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.housecallpro.com/jobs/:job_id/line_items",
+            "params": [
+              {
+                "name": "job_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create Job Line Item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

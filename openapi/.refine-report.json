@@ -1,0 +1,47 @@
+{
+  "provider": "housecall-pro",
+  "sources": [
+    "housecall-pro-companies-api-openapi.yml",
+    "housecall-pro-customers-api-openapi.yml",
+    "housecall-pro-employees-api-openapi.yml",
+    "housecall-pro-estimates-api-openapi.yml",
+    "housecall-pro-invoices-api-openapi.yml",
+    "housecall-pro-jobs-api-openapi.yml",
+    "housecall-pro-leads-api-openapi.yml",
+    "housecall-pro-line-items-api-openapi.yml",
+    "housecall-pro-payments-api-openapi.yml",
+    "housecall-pro-schedule-items-api-openapi.yml",
+    "housecall-pro-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "housecall-pro-companies-api-openapi.yml",
+    "housecall-pro-customers-api-openapi.yml",
+    "housecall-pro-employees-api-openapi.yml",
+    "housecall-pro-estimates-api-openapi.yml",
+    "housecall-pro-invoices-api-openapi.yml",
+    "housecall-pro-jobs-api-openapi.yml",
+    "housecall-pro-leads-api-openapi.yml",
+    "housecall-pro-line-items-api-openapi.yml",
+    "housecall-pro-payments-api-openapi.yml",
+    "housecall-pro-schedule-items-api-openapi.yml",
+    "housecall-pro-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "housecall-pro-companies-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-customers-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-employees-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-estimates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-invoices-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-leads-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-line-items-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-payments-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-schedule-items-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "housecall-pro-webhooks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}

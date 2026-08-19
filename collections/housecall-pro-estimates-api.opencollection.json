@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Housecall Pro Public Estimates API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Estimates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Estimates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.housecallpro.com/estimates"
+          },
+          "docs": "List Estimates"
+        },
+        {
+          "info": {
+            "name": "Create Estimate",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.housecallpro.com/estimates"
+          },
+          "docs": "Create Estimate"
+        },
+        {
+          "info": {
+            "name": "Get Estimate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.housecallpro.com/estimates/:estimate_id",
+            "params": [
+              {
+                "name": "estimate_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Estimate"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

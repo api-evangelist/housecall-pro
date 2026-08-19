@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Housecall Pro Public Leads API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Leads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.housecallpro.com/leads"
+          },
+          "docs": "List Leads"
+        },
+        {
+          "info": {
+            "name": "Create Lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.housecallpro.com/leads"
+          },
+          "docs": "Create Lead"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

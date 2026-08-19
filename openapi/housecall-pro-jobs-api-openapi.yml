@@ -1,0 +1,303 @@
+openapi: 3.2.0
+info:
+  title: Housecall Pro Public Jobs API
+  version: '1.0'
+  description: 'The Housecall Pro Public API exposes core resources of the Housecall Pro home services
+
+    business management platform — customers, leads, jobs, estimates, invoices, payments,
+
+    employees, schedule items, line items, and webhooks. The API is available to Pros on
+
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
+
+    '
+  contact:
+    name: Housecall Pro
+    url: https://www.housecallpro.com
+  license:
+    name: Proprietary
+servers:
+- url: https://api.housecallpro.com
+  description: Production
+security:
+- bearerAuth: []
+- apiKey: []
+tags:
+- name: Jobs
+paths:
+  /jobs:
+    get:
+      tags:
+      - Jobs
+      summary: List Jobs
+      operationId: listJobs
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        schema:
+          type: integer
+      - name: scheduled_start_min
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: scheduled_start_max
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: customer_id
+        in: query
+        schema:
+          type: string
+      - name: employee_ids
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: Job collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobs:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Job'
+    post:
+      tags:
+      - Jobs
+      summary: Create Job
+      operationId: createJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Job'
+      responses:
+        '201':
+          description: Job created.
+  /jobs/{job_id}:
+    get:
+      tags:
+      - Jobs
+      summary: Get Job
+      operationId: getJob
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Single job.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Job'
+    put:
+      tags:
+      - Jobs
+      summary: Update Job
+      operationId: updateJob
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Job updated.
+    delete:
+      tags:
+      - Jobs
+      summary: Delete Job
+      operationId: deleteJob
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Job deleted.
+components:
+  schemas:
+    Job:
+      type: object
+      properties:
+        id:
+          type: string
+        invoice_number:
+          type: string
+        description:
+          type: string
+        customer:
+          $ref: '#/components/schemas/Customer'
+        address:
+          $ref: '#/components/schemas/Address'
+        notes:
+          type: string
+        work_status:
+          type: string
+          enum:
+          - unscheduled
+          - scheduled
+          - in_progress
+          - complete
+          - completed_unrated
+          - user_canceled
+          - pro_canceled
+        work_timestamps:
+          type: object
+          properties:
+            on_my_way_at:
+              type: string
+              format: date-time
+            started_at:
+              type: string
+              format: date-time
+            completed_at:
+              type: string
+              format: date-time
+        schedule:
+          type: object
+          properties:
+            scheduled_start:
+              type: string
+              format: date-time
+            scheduled_end:
+              type: string
+              format: date-time
+            arrival_window:
+              type: integer
+        total_amount:
+          type: integer
+          description: Amount in cents.
+        outstanding_balance:
+          type: integer
+        assigned_employees:
+          type: array
+          items:
+            $ref: '#/components/schemas/Employee'
+        tags:
+          type: array
+          items:
+            type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    Address:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+          - billing
+          - service
+        street:
+          type: string
+        street_line_2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+    Customer:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        home_number:
+          type: string
+        work_number:
+          type: string
+        company:
+          type: string
+        notifications_enabled:
+          type: boolean
+        lead_source:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    Employee:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        role:
+          type: string
+          enum:
+          - admin
+          - office_staff
+          - field_tech
+        color_hex:
+          type: string
+        avatar_url:
+          type: string
+        permissions:
+          type: object
+          additionalProperties:
+            type: boolean
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
+      description: Bearer token using the API key generated from the MAX-plan App Store API card.
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API key passed as `Authorization: Token {key}`.'

@@ -1,0 +1,274 @@
+{
+  "item": [
+    {
+      "id": "d248e7f8-a208-427d-a9f3-5fe197e1e480",
+      "name": "Estimates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0c7ec26e-1224-4a7c-8d4a-40d8fa9117cf",
+          "name": "List Estimates",
+          "request": {
+            "name": "List Estimates",
+            "description": {},
+            "url": {
+              "path": [
+                "estimates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "abcbe6da-9d48-40ba-94f6-959817152e7a",
+              "name": "Estimate collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "estimates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"estimates\": [\n    {\n      \"id\": \"string\",\n      \"estimate_number\": \"string\",\n      \"work_status\": \"string\",\n      \"customer\": {\n        \"id\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"email\": \"bizM76G-Oz26pn@bVyRdkpbkTKDVxbghtAwPOzW.eud\",\n        \"mobile_number\": \"string\",\n        \"home_number\": \"string\",\n        \"work_number\": \"string\",\n        \"company\": \"string\",\n        \"notifications_enabled\": true,\n        \"lead_source\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"addresses\": [\n          {\n            \"id\": \"string\",\n            \"type\": \"service\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"type\": \"service\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          }\n        ],\n        \"created_at\": \"1975-02-10T10:40:22.139Z\",\n        \"updated_at\": \"2000-05-19T07:22:19.640Z\"\n      },\n      \"address\": {\n        \"id\": \"string\",\n        \"type\": \"billing\",\n        \"street\": \"string\",\n        \"street_line_2\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"zip\": \"string\",\n        \"country\": \"string\"\n      },\n      \"total_amount\": 8443,\n      \"approval_status\": \"declined\",\n      \"options\": [\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"total_amount\": 2612\n        },\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"total_amount\": 280\n        }\n      ],\n      \"created_at\": \"1984-01-27T16:32:09.192Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"estimate_number\": \"string\",\n      \"work_status\": \"string\",\n      \"customer\": {\n        \"id\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"email\": \"cevOoNi@HHJ.ms\",\n        \"mobile_number\": \"string\",\n        \"home_number\": \"string\",\n        \"work_number\": \"string\",\n        \"company\": \"string\",\n        \"notifications_enabled\": true,\n        \"lead_source\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"addresses\": [\n          {\n            \"id\": \"string\",\n            \"type\": \"billing\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"type\": \"service\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          }\n        ],\n        \"created_at\": \"1968-04-18T00:53:41.624Z\",\n        \"updated_at\": \"1983-07-24T10:16:32.615Z\"\n      },\n      \"address\": {\n        \"id\": \"string\",\n        \"type\": \"billing\",\n        \"street\": \"string\",\n        \"street_line_2\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"zip\": \"string\",\n        \"country\": \"string\"\n      },\n      \"total_amount\": 8549,\n      \"approval_status\": \"declined\",\n      \"options\": [\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"total_amount\": 8256\n        },\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"total_amount\": 8924\n        }\n      ],\n      \"created_at\": \"1987-02-01T22:34:36.459Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "304ff2e6-5e97-45c8-939b-efe635d05d70",
+          "name": "Create Estimate",
+          "request": {
+            "name": "Create Estimate",
+            "description": {},
+            "url": {
+              "path": [
+                "estimates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2dfe6774-bcd5-4ef8-a42e-1e8a6db8832a",
+              "name": "Estimate created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "estimates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1589f0ab-1bd6-4a3a-827d-7eda7ba66d66",
+          "name": "Get Estimate",
+          "request": {
+            "name": "Get Estimate",
+            "description": {},
+            "url": {
+              "path": [
+                "estimates",
+                ":estimate_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "estimate_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7e2117bc-ca05-4aea-add3-ff81ad511463",
+              "name": "Single estimate.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "estimates",
+                    ":estimate_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "estimate_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"estimate_number\": \"string\",\n  \"work_status\": \"string\",\n  \"customer\": {\n    \"id\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"email\": \"f1u3BvO5d9viPj@lMyhdtCewpQJBSCFiTuZoHobHHmNqr.dnf\",\n    \"mobile_number\": \"string\",\n    \"home_number\": \"string\",\n    \"work_number\": \"string\",\n    \"company\": \"string\",\n    \"notifications_enabled\": true,\n    \"lead_source\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"addresses\": [\n      {\n        \"id\": \"string\",\n        \"type\": \"service\",\n        \"street\": \"string\",\n        \"street_line_2\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"zip\": \"string\",\n        \"country\": \"string\"\n      },\n      {\n        \"id\": \"string\",\n        \"type\": \"billing\",\n        \"street\": \"string\",\n        \"street_line_2\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"zip\": \"string\",\n        \"country\": \"string\"\n      }\n    ],\n    \"created_at\": \"1957-11-09T08:50:08.729Z\",\n    \"updated_at\": \"1949-05-23T15:48:07.807Z\"\n  },\n  \"address\": {\n    \"id\": \"string\",\n    \"type\": \"billing\",\n    \"street\": \"string\",\n    \"street_line_2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"total_amount\": 6388,\n  \"approval_status\": \"pending\",\n  \"options\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"total_amount\": 8925\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"total_amount\": 6374\n    }\n  ],\n  \"created_at\": \"2016-02-20T04:55:45.252Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.housecallpro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6724f957-09f4-4b79-b9b9-94aba29712f4",
+    "name": "Housecall Pro Public Estimates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Housecall Pro Public API exposes core resources of the Housecall Pro home services\nbusiness management platform — customers, leads, jobs, estimates, invoices, payments,\nemployees, schedule items, line items, and webhooks. The API is available to Pros on\nthe MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.\n\n\nContact Support:\n Name: Housecall Pro",
+      "type": "text/plain"
+    }
+  }
+}

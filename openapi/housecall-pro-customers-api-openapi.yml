@@ -1,0 +1,198 @@
+openapi: 3.2.0
+info:
+  title: Housecall Pro Public Customers API
+  version: '1.0'
+  description: 'The Housecall Pro Public API exposes core resources of the Housecall Pro home services
+
+    business management platform — customers, leads, jobs, estimates, invoices, payments,
+
+    employees, schedule items, line items, and webhooks. The API is available to Pros on
+
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
+
+    '
+  contact:
+    name: Housecall Pro
+    url: https://www.housecallpro.com
+  license:
+    name: Proprietary
+servers:
+- url: https://api.housecallpro.com
+  description: Production
+security:
+- bearerAuth: []
+- apiKey: []
+tags:
+- name: Customers
+paths:
+  /customers:
+    get:
+      tags:
+      - Customers
+      summary: List Customers
+      operationId: listCustomers
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        schema:
+          type: integer
+      - name: q
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Customer collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  customers:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Customer'
+    post:
+      tags:
+      - Customers
+      summary: Create Customer
+      operationId: createCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '201':
+          description: Customer created.
+  /customers/{customer_id}:
+    get:
+      tags:
+      - Customers
+      summary: Get Customer
+      operationId: getCustomer
+      parameters:
+      - name: customer_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Single customer.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+    put:
+      tags:
+      - Customers
+      summary: Update Customer
+      operationId: updateCustomer
+      parameters:
+      - name: customer_id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '200':
+          description: Customer updated.
+    delete:
+      tags:
+      - Customers
+      summary: Delete Customer
+      operationId: deleteCustomer
+      parameters:
+      - name: customer_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Customer deleted.
+components:
+  schemas:
+    Address:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+          - billing
+          - service
+        street:
+          type: string
+        street_line_2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+    Customer:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        home_number:
+          type: string
+        work_number:
+          type: string
+        company:
+          type: string
+        notifications_enabled:
+          type: boolean
+        lead_source:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
+      description: Bearer token using the API key generated from the MAX-plan App Store API card.
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API key passed as `Authorization: Token {key}`.'

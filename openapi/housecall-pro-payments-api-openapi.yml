@@ -1,0 +1,91 @@
+openapi: 3.2.0
+info:
+  title: Housecall Pro Public Payments API
+  version: '1.0'
+  description: 'The Housecall Pro Public API exposes core resources of the Housecall Pro home services
+
+    business management platform — customers, leads, jobs, estimates, invoices, payments,
+
+    employees, schedule items, line items, and webhooks. The API is available to Pros on
+
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
+
+    '
+  contact:
+    name: Housecall Pro
+    url: https://www.housecallpro.com
+  license:
+    name: Proprietary
+servers:
+- url: https://api.housecallpro.com
+  description: Production
+security:
+- bearerAuth: []
+- apiKey: []
+tags:
+- name: Payments
+paths:
+  /invoices/{invoice_id}/payments:
+    get:
+      tags:
+      - Payments
+      summary: List Invoice Payments
+      operationId: listInvoicePayments
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Payment collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  payments:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Payment'
+components:
+  schemas:
+    Payment:
+      type: object
+      properties:
+        id:
+          type: string
+        invoice_id:
+          type: string
+        amount:
+          type: integer
+        payment_method:
+          type: string
+          enum:
+          - cash
+          - check
+          - credit_card
+          - ach
+          - other
+        status:
+          type: string
+          enum:
+          - succeeded
+          - pending
+          - failed
+          - refunded
+        processed_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
+      description: Bearer token using the API key generated from the MAX-plan App Store API card.
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API key passed as `Authorization: Token {key}`.'

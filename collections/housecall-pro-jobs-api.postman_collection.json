@@ -1,0 +1,528 @@
+{
+  "item": [
+    {
+      "id": "6bf56c90-c3e7-4dbc-b2d1-0cc77c3ddc1b",
+      "name": "Jobs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b433e563-26ed-48e0-8115-a55578d05e51",
+          "name": "List Jobs",
+          "request": {
+            "name": "List Jobs",
+            "description": {},
+            "url": {
+              "path": [
+                "jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduled_start_min",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduled_start_max",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "customer_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "employee_ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "employee_ids",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1adeac06-55fa-4562-b4ef-2c9e27199dee",
+              "name": "Job collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "scheduled_start_min",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "scheduled_start_max",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "customer_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "employee_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "employee_ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jobs\": [\n    {\n      \"id\": \"string\",\n      \"invoice_number\": \"string\",\n      \"description\": \"string\",\n      \"customer\": {\n        \"id\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"email\": \"JEmvEAPXhZU@wjPloJYNSPxIrNJRTWGuxbkx.nt\",\n        \"mobile_number\": \"string\",\n        \"home_number\": \"string\",\n        \"work_number\": \"string\",\n        \"company\": \"string\",\n        \"notifications_enabled\": false,\n        \"lead_source\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"addresses\": [\n          {\n            \"id\": \"string\",\n            \"type\": \"service\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"type\": \"service\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          }\n        ],\n        \"created_at\": \"1964-02-25T12:39:21.806Z\",\n        \"updated_at\": \"1975-05-02T20:53:45.717Z\"\n      },\n      \"address\": {\n        \"id\": \"string\",\n        \"type\": \"billing\",\n        \"street\": \"string\",\n        \"street_line_2\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"zip\": \"string\",\n        \"country\": \"string\"\n      },\n      \"notes\": \"string\",\n      \"work_status\": \"scheduled\",\n      \"work_timestamps\": {\n        \"on_my_way_at\": \"1977-05-29T08:01:04.009Z\",\n        \"started_at\": \"2008-11-15T00:08:19.601Z\",\n        \"completed_at\": \"2020-07-20T01:27:30.347Z\"\n      },\n      \"schedule\": {\n        \"scheduled_start\": \"1947-04-28T10:54:04.075Z\",\n        \"scheduled_end\": \"2024-07-25T06:47:51.971Z\",\n        \"arrival_window\": 9140\n      },\n      \"total_amount\": 686,\n      \"outstanding_balance\": 4233,\n      \"assigned_employees\": [\n        {\n          \"id\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\",\n          \"email\": \"Rz1S4655tm2crt@MuFSKKIUpWrhILIhDYfKMwVA.pcj\",\n          \"mobile_number\": \"string\",\n          \"role\": \"admin\",\n          \"color_hex\": \"string\",\n          \"avatar_url\": \"string\",\n          \"permissions\": {\n            \"key_0\": false,\n            \"key_1\": false\n          }\n        },\n        {\n          \"id\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\",\n          \"email\": \"OamH1vhiTD7n1qF@CLTIaFJwtXBxsgwTSiWnJbuILhE.iprp\",\n          \"mobile_number\": \"string\",\n          \"role\": \"field_tech\",\n          \"color_hex\": \"string\",\n          \"avatar_url\": \"string\",\n          \"permissions\": {\n            \"key_0\": true,\n            \"key_1\": true\n          }\n        }\n      ],\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"created_at\": \"2011-05-04T19:16:38.694Z\",\n      \"updated_at\": \"2022-04-11T09:45:42.115Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"invoice_number\": \"string\",\n      \"description\": \"string\",\n      \"customer\": {\n        \"id\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"email\": \"EPMEN4TiGZG@vaRVMdggdfKoZRYxccBvvJdS.gx\",\n        \"mobile_number\": \"string\",\n        \"home_number\": \"string\",\n        \"work_number\": \"string\",\n        \"company\": \"string\",\n        \"notifications_enabled\": false,\n        \"lead_source\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"addresses\": [\n          {\n            \"id\": \"string\",\n            \"type\": \"billing\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"type\": \"service\",\n            \"street\": \"string\",\n            \"street_line_2\": \"string\",\n            \"city\": \"string\",\n            \"state\": \"string\",\n            \"zip\": \"string\",\n            \"country\": \"string\"\n          }\n        ],\n        \"created_at\": \"1965-02-01T00:59:10.613Z\",\n        \"updated_at\": \"1969-06-07T22:22:57.902Z\"\n      },\n      \"address\": {\n        \"id\": \"string\",\n        \"type\": \"service\",\n        \"street\": \"string\",\n        \"street_line_2\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"zip\": \"string\",\n        \"country\": \"string\"\n      },\n      \"notes\": \"string\",\n      \"work_status\": \"user_canceled\",\n      \"work_timestamps\": {\n        \"on_my_way_at\": \"1994-08-19T00:28:38.255Z\",\n        \"started_at\": \"1959-09-28T11:08:46.801Z\",\n        \"completed_at\": \"1987-01-22T06:49:57.722Z\"\n      },\n      \"schedule\": {\n        \"scheduled_start\": \"1987-06-05T20:45:05.685Z\",\n        \"scheduled_end\": \"1976-03-28T14:27:53.623Z\",\n        \"arrival_window\": 5763\n      },\n      \"total_amount\": 5552,\n      \"outstanding_balance\": 112,\n      \"assigned_employees\": [\n        {\n          \"id\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\",\n          \"email\": \"YBtzxnfvsgqWjSb@IHnUfrVsd.yb\",\n          \"mobile_number\": \"string\",\n          \"role\": \"field_tech\",\n          \"color_hex\": \"string\",\n          \"avatar_url\": \"string\",\n          \"permissions\": {\n            \"key_0\": false,\n            \"key_1\": false\n          }\n        },\n        {\n          \"id\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\",\n          \"email\": \"SV5diZ9NXjC@YGRLjwypFJ.hk\",\n          \"mobile_number\": \"string\",\n          \"role\": \"field_tech\",\n          \"color_hex\": \"string\",\n          \"avatar_url\": \"string\",\n          \"permissions\": {\n            \"key_0\": false\n          }\n        }\n      ],\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"created_at\": \"2009-11-01T23:01:02.417Z\",\n      \"updated_at\": \"1952-07-29T21:03:12.006Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4319aa99-a948-4525-84f5-84fc971d94a3",
+          "name": "Create Job",
+          "request": {
+            "name": "Create Job",
+            "description": {},
+            "url": {
+              "path": [
+                "jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"invoice_number\": \"<string>\",\n  \"description\": \"<string>\",\n  \"customer\": {\n    \"id\": \"<string>\",\n    \"first_name\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"mobile_number\": \"<string>\",\n    \"home_number\": \"<string>\",\n    \"work_number\": \"<string>\",\n    \"company\": \"<string>\",\n    \"notifications_enabled\": \"<boolean>\",\n    \"lead_source\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"addresses\": [\n      {\n        \"id\": \"<string>\",\n        \"type\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street_line_2\": \"<string>\",\n        \"city\": \"<string>\",\n        \"state\": \"<string>\",\n        \"zip\": \"<string>\",\n        \"country\": \"<string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"type\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street_line_2\": \"<string>\",\n        \"city\": \"<string>\",\n        \"state\": \"<string>\",\n        \"zip\": \"<string>\",\n        \"country\": \"<string>\"\n      }\n    ],\n    \"created_at\": \"<dateTime>\",\n    \"updated_at\": \"<dateTime>\"\n  },\n  \"address\": {\n    \"id\": \"<string>\",\n    \"type\": \"<string>\",\n    \"street\": \"<string>\",\n    \"street_line_2\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"notes\": \"<string>\",\n  \"work_status\": \"<string>\",\n  \"work_timestamps\": {\n    \"on_my_way_at\": \"<dateTime>\",\n    \"started_at\": \"<dateTime>\",\n    \"completed_at\": \"<dateTime>\"\n  },\n  \"schedule\": {\n    \"scheduled_start\": \"<dateTime>\",\n    \"scheduled_end\": \"<dateTime>\",\n    \"arrival_window\": \"<integer>\"\n  },\n  \"total_amount\": \"<integer>\",\n  \"outstanding_balance\": \"<integer>\",\n  \"assigned_employees\": [\n    {\n      \"id\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"email\": \"<email>\",\n      \"mobile_number\": \"<string>\",\n      \"role\": \"<string>\",\n      \"color_hex\": \"<string>\",\n      \"avatar_url\": \"<string>\",\n      \"permissions\": {\n        \"key_0\": \"<boolean>\",\n        \"key_1\": \"<boolean>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"email\": \"<email>\",\n      \"mobile_number\": \"<string>\",\n      \"role\": \"<string>\",\n      \"color_hex\": \"<string>\",\n      \"avatar_url\": \"<string>\",\n      \"permissions\": {\n        \"key_0\": \"<boolean>\",\n        \"key_1\": \"<boolean>\"\n      }\n    }\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7caef1dd-29af-4b29-a736-6ff6c12d60de",
+              "name": "Job created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"invoice_number\": \"<string>\",\n  \"description\": \"<string>\",\n  \"customer\": {\n    \"id\": \"<string>\",\n    \"first_name\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"mobile_number\": \"<string>\",\n    \"home_number\": \"<string>\",\n    \"work_number\": \"<string>\",\n    \"company\": \"<string>\",\n    \"notifications_enabled\": \"<boolean>\",\n    \"lead_source\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"addresses\": [\n      {\n        \"id\": \"<string>\",\n        \"type\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street_line_2\": \"<string>\",\n        \"city\": \"<string>\",\n        \"state\": \"<string>\",\n        \"zip\": \"<string>\",\n        \"country\": \"<string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"type\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street_line_2\": \"<string>\",\n        \"city\": \"<string>\",\n        \"state\": \"<string>\",\n        \"zip\": \"<string>\",\n        \"country\": \"<string>\"\n      }\n    ],\n    \"created_at\": \"<dateTime>\",\n    \"updated_at\": \"<dateTime>\"\n  },\n  \"address\": {\n    \"id\": \"<string>\",\n    \"type\": \"<string>\",\n    \"street\": \"<string>\",\n    \"street_line_2\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"notes\": \"<string>\",\n  \"work_status\": \"<string>\",\n  \"work_timestamps\": {\n    \"on_my_way_at\": \"<dateTime>\",\n    \"started_at\": \"<dateTime>\",\n    \"completed_at\": \"<dateTime>\"\n  },\n  \"schedule\": {\n    \"scheduled_start\": \"<dateTime>\",\n    \"scheduled_end\": \"<dateTime>\",\n    \"arrival_window\": \"<integer>\"\n  },\n  \"total_amount\": \"<integer>\",\n  \"outstanding_balance\": \"<integer>\",\n  \"assigned_employees\": [\n    {\n      \"id\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"email\": \"<email>\",\n      \"mobile_number\": \"<string>\",\n      \"role\": \"<string>\",\n      \"color_hex\": \"<string>\",\n      \"avatar_url\": \"<string>\",\n      \"permissions\": {\n        \"key_0\": \"<boolean>\",\n        \"key_1\": \"<boolean>\",\n        \"key_2\": \"<boolean>\",\n        \"key_3\": \"<boolean>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"email\": \"<email>\",\n      \"mobile_number\": \"<string>\",\n      \"role\": \"<string>\",\n      \"color_hex\": \"<string>\",\n      \"avatar_url\": \"<string>\",\n      \"permissions\": {\n        \"key_0\": \"<boolean>\"\n      }\n    }\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3699c81a-35c1-4e9d-81b5-f1dba9165ba9",
+          "name": "Get Job",
+          "request": {
+            "name": "Get Job",
+            "description": {},
+            "url": {
+              "path": [
+                "jobs",
+                ":job_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "job_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eb664703-2acb-4ae0-9729-d739ab771194",
+              "name": "Single job.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<string>\",\n  \"invoice_number\": \"<string>\",\n  \"description\": \"<string>\",\n  \"customer\": {\n    \"id\": \"<string>\",\n    \"first_name\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"mobile_number\": \"<string>\",\n    \"home_number\": \"<string>\",\n    \"work_number\": \"<string>\",\n    \"company\": \"<string>\",\n    \"notifications_enabled\": \"<boolean>\",\n    \"lead_source\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"addresses\": [\n      {\n        \"id\": \"<string>\",\n        \"type\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street_line_2\": \"<string>\",\n        \"city\": \"<string>\",\n        \"state\": \"<string>\",\n        \"zip\": \"<string>\",\n        \"country\": \"<string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"type\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street_line_2\": \"<string>\",\n        \"city\": \"<string>\",\n        \"state\": \"<string>\",\n        \"zip\": \"<string>\",\n        \"country\": \"<string>\"\n      }\n    ],\n    \"created_at\": \"<dateTime>\",\n    \"updated_at\": \"<dateTime>\"\n  },\n  \"address\": {\n    \"id\": \"<string>\",\n    \"type\": \"<string>\",\n    \"street\": \"<string>\",\n    \"street_line_2\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"notes\": \"<string>\",\n  \"work_status\": \"<string>\",\n  \"work_timestamps\": {\n    \"on_my_way_at\": \"<dateTime>\",\n    \"started_at\": \"<dateTime>\",\n    \"completed_at\": \"<dateTime>\"\n  },\n  \"schedule\": {\n    \"scheduled_start\": \"<dateTime>\",\n    \"scheduled_end\": \"<dateTime>\",\n    \"arrival_window\": \"<integer>\"\n  },\n  \"total_amount\": \"<integer>\",\n  \"outstanding_balance\": \"<integer>\",\n  \"assigned_employees\": [\n    {\n      \"id\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"email\": \"<email>\",\n      \"mobile_number\": \"<string>\",\n      \"role\": \"<string>\",\n      \"color_hex\": \"<string>\",\n      \"avatar_url\": \"<string>\",\n      \"permissions\": {\n        \"key_0\": \"<boolean>\",\n        \"key_1\": \"<boolean>\",\n        \"key_2\": \"<boolean>\",\n        \"key_3\": \"<boolean>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"email\": \"<email>\",\n      \"mobile_number\": \"<string>\",\n      \"role\": \"<string>\",\n      \"color_hex\": \"<string>\",\n      \"avatar_url\": \"<string>\",\n      \"permissions\": {\n        \"key_0\": \"<boolean>\"\n      }\n    }\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<dateTime>\",\n  \"updated_at\": \"<dateTime>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "064a4f43-7358-410b-90dd-c3f7cda45149",
+          "name": "Update Job",
+          "request": {
+            "name": "Update Job",
+            "description": {},
+            "url": {
+              "path": [
+                "jobs",
+                ":job_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "job_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d06de438-a0ff-4663-a38f-d771367e2491",
+              "name": "Job updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cf48d278-5cda-4208-af75-722aa6b5b87b",
+          "name": "Delete Job",
+          "request": {
+            "name": "Delete Job",
+            "description": {},
+            "url": {
+              "path": [
+                "jobs",
+                ":job_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "job_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e0e76984-f1ec-4df0-b8c6-cca7bc689eae",
+              "name": "Job deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.housecallpro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c52df1a1-a48e-430a-89af-22f681470b60",
+    "name": "Housecall Pro Public Jobs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Housecall Pro Public API exposes core resources of the Housecall Pro home services\nbusiness management platform — customers, leads, jobs, estimates, invoices, payments,\nemployees, schedule items, line items, and webhooks. The API is available to Pros on\nthe MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.\n\n\nContact Support:\n Name: Housecall Pro",
+      "type": "text/plain"
+    }
+  }
+}
