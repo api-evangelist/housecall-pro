@@ -162,6 +162,8 @@ apis:
   humanURL: https://docs.housecallpro.com/
   baseURL: https://api.housecallpro.com
   tags:
+  - Job
+  tags_raw:
   - Jobs
   properties:
   - type: OpenAPI
@@ -317,6 +319,8 @@ apis:
   humanURL: https://docs.housecallpro.com/
   baseURL: https://api.housecallpro.com
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
@@ -344,6 +348,20 @@ apis:
     url: json-ld/housecall-pro-context.jsonld
 name: Housecall Pro
 tags:
+  - Home Services
+  - Field Service Management
+  - Scheduling
+  - Dispatching
+  - Invoicing
+  - Payments
+  - HVAC
+  - Plumbing
+  - Electrical
+  - Cleaning
+  - Landscaping
+  - Pest Control
+  - Software-as-a-Service
+tags_raw:
   - Home Services
   - Field Service Management
   - Scheduling
