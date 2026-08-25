@@ -5,7 +5,7 @@
       "source": "https://www.housecallpro.com/feed/",
       "feed_url": "https://www.housecallpro.com/feed/",
       "title": "",
-      "saved": 4,
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -13,6 +13,6 @@
       "error": "HTTPError"
     }
   ],
-  "post_count": 36,
-  "fetched": "2026-08-15T12:11:08Z"
+  "post_count": 46,
+  "fetched": "2026-08-22T20:20:02Z"
 }
