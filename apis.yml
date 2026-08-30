@@ -403,6 +403,9 @@ accessModel:
 image: https://static-assets.housecallpro.com/brand/logos/square-door-only.svg
 access: 3rd-Party
 common:
+  - type: CapabilityMap
+    url: capabilities/housecall-pro-capability-edges.yml
+    name: Housecall Pro Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/housecall-pro/overview
   - type: DomainSecurity
