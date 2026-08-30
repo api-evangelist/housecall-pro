@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 4
+edge_count: 5
 edges:
 - tag: Customers
   spec_file: housecall-pro-customers-api-openapi.yml
@@ -19,34 +19,43 @@ edges:
   capability_id_l1: BC-420
   capability_name: Customer Data Management
   confidence: 0.85
-  evidence: 'POST /customers  createCustomer  Create Customer; schemas: Address, Customer'
-  reason: Full CRUD over the Customer master record (with address) in a business management platform —
-    this is customer data/master record management.
+  evidence: 'POST /customers  createCustomer  Create Customer ... schemas: Address, Customer'
+  reason: Full CRUD lifecycle over customer master records including addresses — customer data management
+    in the CRM sense.
 - tag: Invoices
   spec_file: housecall-pro-invoices-api-openapi.yml
   capability_id: BC-200.30
   capability_id_l1: BC-200
   capability_name: Accounts Receivable Management
   confidence: 0.8
-  evidence: 'POST /invoices  createInvoice  Create Invoice; schemas: Invoice'
-  reason: Generation and retrieval of customer invoices is accounts receivable / customer invoicing. Payments
-    are a separate tag, so scope here is invoicing itself.
-- tag: Payments
-  spec_file: housecall-pro-payments-api-openapi.yml
-  capability_id: BC-200.30
-  capability_id_l1: BC-200
-  capability_name: Accounts Receivable Management
-  confidence: 0.8
-  evidence: 'GET /invoices/{invoice_id}/payments  List Invoice Payments; schema: Payment'
-  reason: Operations list payments recorded against a customer invoice, which is cash application / receivables
-    against issued invoices — Accounts Receivable Management. Not a payment-processing gateway capability,
-    so AR is the honest fit.
+  evidence: 'POST /invoices  createInvoice  Create Invoice ... schemas: Invoice'
+  reason: Generation and retrieval of customer invoices is accounts receivable / customer invoicing.
 - tag: Estimates
   spec_file: housecall-pro-estimates-api-openapi.yml
   capability_id: BC-410.40
   capability_id_l1: BC-410
   capability_name: Quote & Configuration Management
-  confidence: 0.75
-  evidence: 'POST /estimates  createEstimate  Create Estimate; schemas: Address, Customer, Estimate'
-  reason: Creating and retrieving customer estimates is quoting of proposed work prior to order — quote
-    management. Some ambiguity as estimates could also be read as opportunity artefacts.
+  confidence: 0.78
+  evidence: 'POST /estimates  createEstimate  Create Estimate ... schemas: Address, Customer, Estimate'
+  reason: Creating and retrieving customer estimates for service work is quoting activity in the lead-to-order
+    flow, matching Quote & Configuration Management.
+- tag: Payments
+  spec_file: housecall-pro-payments-api-openapi.yml
+  capability_id: BC-200.30
+  capability_id_l1: BC-200
+  capability_name: Accounts Receivable Management
+  confidence: 0.72
+  evidence: 'GET /invoices/{invoice_id}/payments  listInvoicePayments  List Invoice Payments; schemas:
+    Payment'
+  reason: The operation exposes payments recorded against a customer invoice, which is customer invoicing
+    and cash application — Accounts Receivable Management. Confidence moderated because it is a single
+    read-only endpoint with no collections/dunning detail.
+- tag: Employees
+  spec_file: housecall-pro-employees-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.7
+  evidence: 'GET /employees  listEmployees  List Employees ... schemas: Employee'
+  reason: Exposes employee master records for the service business, which corresponds to HR operations/employee
+    records. Read-only surface with no pay, talent or benefits detail, so confidence is moderate.
