@@ -403,6 +403,8 @@ accessModel:
 image: https://static-assets.housecallpro.com/brand/logos/square-door-only.svg
 access: 3rd-Party
 common:
+  - type: Website
+    url: https://www.housecallpro.com/
   - type: CapabilityMap
     url: capabilities/housecall-pro-capability-edges.yml
     name: Housecall Pro Business Capability Map
