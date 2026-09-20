@@ -10,6 +10,11 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: business-product
 pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
+  managed_tier: Basic
 published: true
 note: 'Monthly prices also shown ($79, $189, $329) alongside annual pricing; promos like "$26 /mo for
   1 month" and "$99 /mo for 3 months" appear. Payment processing: "card processing fees start at 2.59%"
