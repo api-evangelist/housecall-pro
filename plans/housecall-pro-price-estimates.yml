@@ -1,0 +1,24 @@
+# ESTIMATES computed by API Evangelist — not published by the provider. See `note` and `replace_by`.
+generated: '2026-09-20'
+method: estimated
+estimator: 'planning/api-economics/estimate_prices.py — design: ESTIMATION.md'
+note: ESTIMATES, not quotes. Computed by API Evangelist from the prices this provider publishes on https://www.housecallpro.com/pricing/
+  (transcribed in plans/housecall-pro-plans-pricing.yml). Nothing here overrides a published price. Each
+  estimate names the figure it came from, the formula, any assumption, and the field the provider can
+  publish to replace it — publish that and the estimate is retired.
+audience_of_source_pricing: business-product
+pricing_basis: tiered-subscription
+estimate_count: 1
+estimates:
+- kind: entry_cost
+  grade: A
+  grade_meaning: quoted — the page states this figure
+  usd_per_month: 59.0
+  meaning: the cheapest published paid tier — a floor on the cost of getting in, NOT the price of the
+    API alone
+  inputs:
+  - file: plans/housecall-pro-plans-pricing.yml
+    plan: Basic
+    price_text: $59 /mo
+  replace_by: 'API Commons Plans — plans[].entries[] with type: fee, a numeric `price`, `timeFrame: month`
+    and the tier that includes API access stated in `elements`'
