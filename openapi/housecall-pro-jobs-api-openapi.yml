@@ -8,9 +8,7 @@ info:
 
     employees, schedule items, line items, and webhooks. The API is available to Pros on
 
-    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
-
-    '
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.'
   contact:
     name: Housecall Pro
     url: https://www.housecallpro.com
@@ -135,6 +133,94 @@ paths:
           description: Job deleted.
 components:
   schemas:
+    Customer:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        home_number:
+          type: string
+        work_number:
+          type: string
+        company:
+          type: string
+        notifications_enabled:
+          type: boolean
+        lead_source:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    Address:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+          - billing
+          - service
+        street:
+          type: string
+        street_line_2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+    Employee:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        role:
+          type: string
+          enum:
+          - admin
+          - office_staff
+          - field_tech
+        color_hex:
+          type: string
+        avatar_url:
+          type: string
+        permissions:
+          type: object
+          additionalProperties:
+            type: boolean
     Job:
       type: object
       properties:
@@ -202,94 +288,6 @@ components:
         updated_at:
           type: string
           format: date-time
-    Address:
-      type: object
-      properties:
-        id:
-          type: string
-        type:
-          type: string
-          enum:
-          - billing
-          - service
-        street:
-          type: string
-        street_line_2:
-          type: string
-        city:
-          type: string
-        state:
-          type: string
-        zip:
-          type: string
-        country:
-          type: string
-    Customer:
-      type: object
-      properties:
-        id:
-          type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-        email:
-          type: string
-          format: email
-        mobile_number:
-          type: string
-        home_number:
-          type: string
-        work_number:
-          type: string
-        company:
-          type: string
-        notifications_enabled:
-          type: boolean
-        lead_source:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
-        addresses:
-          type: array
-          items:
-            $ref: '#/components/schemas/Address'
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-    Employee:
-      type: object
-      properties:
-        id:
-          type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-        email:
-          type: string
-          format: email
-        mobile_number:
-          type: string
-        role:
-          type: string
-          enum:
-          - admin
-          - office_staff
-          - field_tech
-        color_hex:
-          type: string
-        avatar_url:
-          type: string
-        permissions:
-          type: object
-          additionalProperties:
-            type: boolean
   securitySchemes:
     bearerAuth:
       type: http

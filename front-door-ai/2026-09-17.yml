@@ -1,0 +1,25 @@
+# Front Door AI Index — housecall-pro — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: housecall-pro
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.housecallpro.com
+  final_host: www.housecallpro.com
+  ownership: own
+  owner: housecall-pro
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 5
+  host_score: 5
+  density: 4.36
+  words: 1148
+  tiers:
+    agentic: 0
+    core: 5
+    model: 0
+  ambiguous: 0
+  top_terms:
+    AI: 5

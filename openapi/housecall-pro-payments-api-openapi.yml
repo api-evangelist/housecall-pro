@@ -8,9 +8,7 @@ info:
 
     employees, schedule items, line items, and webhooks. The API is available to Pros on
 
-    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.
-
-    '
+    the MAX plan and is documented on Stoplight at https://docs.housecallpro.com/.'
   contact:
     name: Housecall Pro
     url: https://www.housecallpro.com
