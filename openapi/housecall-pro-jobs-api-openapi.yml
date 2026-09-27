@@ -133,6 +133,56 @@ paths:
           description: Job deleted.
 components:
   schemas:
+    Employee:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        role:
+          type: string
+          enum:
+          - admin
+          - office_staff
+          - field_tech
+        color_hex:
+          type: string
+        avatar_url:
+          type: string
+        permissions:
+          type: object
+          additionalProperties:
+            type: boolean
+    Address:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+          - billing
+          - service
+        street:
+          type: string
+        street_line_2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
     Customer:
       type: object
       properties:
@@ -171,56 +221,6 @@ components:
         updated_at:
           type: string
           format: date-time
-    Address:
-      type: object
-      properties:
-        id:
-          type: string
-        type:
-          type: string
-          enum:
-          - billing
-          - service
-        street:
-          type: string
-        street_line_2:
-          type: string
-        city:
-          type: string
-        state:
-          type: string
-        zip:
-          type: string
-        country:
-          type: string
-    Employee:
-      type: object
-      properties:
-        id:
-          type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-        email:
-          type: string
-          format: email
-        mobile_number:
-          type: string
-        role:
-          type: string
-          enum:
-          - admin
-          - office_staff
-          - field_tech
-        color_hex:
-          type: string
-        avatar_url:
-          type: string
-        permissions:
-          type: object
-          additionalProperties:
-            type: boolean
     Job:
       type: object
       properties:
