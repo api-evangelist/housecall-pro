@@ -1,5 +1,8 @@
 aid: housecall-pro
 url: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/apis.yml
+x-docs-platform: stoplight
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-10-03
 apis:
 - aid: housecall-pro:housecall-pro-companies-api
   name: Housecall Pro Companies API

@@ -1,24 +1,22 @@
-# Kin Score artifact — housecall-pro — 2026-08-26T215308
+# Kin Score artifact — housecall-pro — 2026-10-03T000835
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: housecall-pro
-  schema_version: 0.15.0
-  scored_at: '2026-08-26'
-  run_ts: 2026-08-26T215308
-  composite: 52.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T000835
+  composite: 48.7
   band: developing
   facets:
-    discoverability: 74.1
-    contract_quality: 66.0
-    governance: 9.8
-    operational_transparency: 23.7
-    developer_ergonomics: 54.8
-    commercial_clarity: 67.1
+    discoverability: 67.9
+    contract_quality: 59.5
     contract_governance: 9.8
+    operational_transparency: 23.7
+    developer_ergonomics: 51.2
     access_clarity: 67.1
   agent_readiness:
-    score: 22.3
+    score: 21.9
     band: agent-aware
     dimensions:
       spec_presence: true
@@ -30,7 +28,7 @@ kin_score:
       error_semantics: false
       openapi_examples: false
       rate_limit_signal: documented
-      event_surface_described: true
+      event_surface_described: unknown
       agent_skills: false
       well_known_catalog: false
       consent_identity: false
@@ -44,7 +42,7 @@ kin_score:
     applies: true
     regime: Payments
     regime_id: payments
-    score: 32.8
+    score: 18.8
     matched_via: tags
   provenance:
     contracts:
