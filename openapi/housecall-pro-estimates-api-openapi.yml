@@ -70,6 +70,42 @@ paths:
                 $ref: '#/components/schemas/Estimate'
 components:
   schemas:
+    Estimate:
+      type: object
+      properties:
+        id:
+          type: string
+        estimate_number:
+          type: string
+        work_status:
+          type: string
+        customer:
+          $ref: '#/components/schemas/Customer'
+        address:
+          $ref: '#/components/schemas/Address'
+        total_amount:
+          type: integer
+        approval_status:
+          type: string
+          enum:
+          - pro_approved
+          - customer_approved
+          - declined
+          - pending
+        options:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              total_amount:
+                type: integer
+        created_at:
+          type: string
+          format: date-time
     Customer:
       type: object
       properties:
@@ -130,42 +166,6 @@ components:
           type: string
         country:
           type: string
-    Estimate:
-      type: object
-      properties:
-        id:
-          type: string
-        estimate_number:
-          type: string
-        work_status:
-          type: string
-        customer:
-          $ref: '#/components/schemas/Customer'
-        address:
-          $ref: '#/components/schemas/Address'
-        total_amount:
-          type: integer
-        approval_status:
-          type: string
-          enum:
-          - pro_approved
-          - customer_approved
-          - declined
-          - pending
-        options:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              name:
-                type: string
-              total_amount:
-                type: integer
-        created_at:
-          type: string
-          format: date-time
   securitySchemes:
     bearerAuth:
       type: http
