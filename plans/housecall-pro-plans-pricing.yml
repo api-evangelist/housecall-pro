@@ -50,3 +50,43 @@ plans:
   currency: USD
   period: none
   included_quota: Free for 2 weeks. Full access to MAX plan features for 14 days
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - hybrid
+  - subscription
+  units: []
+  plans:
+  - name: Basic
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Essentials
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Max
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Free trial
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods:
+    - none
