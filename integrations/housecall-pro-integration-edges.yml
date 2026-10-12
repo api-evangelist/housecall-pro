@@ -1,0 +1,419 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/housecall-pro/integrations
+checked:
+- https://composio.dev/toolkits/housecall-pro
+- https://monid.ai/tools/housecall-pro
+- https://n8n.io/integrations/housecall-pro/
+- https://zapier.com/apps/housecall-pro/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: housecall-pro
+  url: https://zapier.com/apps/housecall-pro/integrations
+  external_url: https://www.housecallpro.com/
+  partner_tier: BRONZE
+  triggers:
+  - key: newFinishedJob
+    label: New Completed Job
+  - key: newScheduledJob
+    label: New Scheduled Job
+  actions:
+  - key: customer
+    label: Create Customer
+  searches: []
+edges:
+- partner_name: LeadConnector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/leadconnector
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.leadconnectorhq.com/
+- partner_name: Google Ads
+  partner: google-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/google-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://ads.google.com/
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: WhatConverts
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/whatconverts
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.whatconverts.com/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: RealWork
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/realwork
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://realworklabs.com/
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: Quo
+  partner: quo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/quo
+  direction: third-party
+  category: Phone & SMS
+  partner_url: https://quo.com/?utm_source=partnership&utm_medium=partner&utm_campaign=zapier
+- partner_name: Constant Contact
+  partner: constant-contact
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/constant-contact
+  direction: third-party
+  category: Email Newsletters
+  partner_url: http://www.constantcontact.com/signup.jsp?pn=zapier
+- partner_name: Wix
+  partner: wix
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/wix
+  direction: third-party
+  category: Website Builders
+  partner_url: https://www.wix.com/
+- partner_name: Microsoft Outlook
+  partner: microsoft-outlook
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/microsoft-outlook
+  direction: third-party
+  category: Calendar
+  partner_url: https://outlook.live.com/
+- partner_name: pulseM
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/pulsem
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pulsem.me/
+- partner_name: Jotform
+  partner: jotform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/jotform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://www.jotform.com/
+- partner_name: Square
+  partner: square
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/square
+  direction: third-party
+  category: eCommerce
+  partner_url: https://squareup.com/t/cmtp_performance/pr_developers/d_partnerships/p_zapier/?route=
+- partner_name: Birdeye
+  partner: birdeye
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/birdeye
+  direction: third-party
+  category: Reviews
+  partner_url: https://birdeye.com/
+- partner_name: Facebook Lead Ads (for Business admins)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/facebook-lead-ads-beta
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://facebook.com/
+- partner_name: RingCentral
+  partner: ringcentral
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/ringcentral
+  direction: third-party
+  category: Phone & SMS
+  partner_url: http://www.ringcentral.com/
+- partner_name: Squarespace Forms
+  partner: squarespace
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/squarespace-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.squarespace.com/
+- partner_name: Pipedrive
+  partner: pipedrive
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/pipedrive
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pipedrive.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: QuickBooks Online
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/quickbooks
+  direction: third-party
+  category: Accounting
+  partner_url: http://intuit.com/
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Docusign
+  partner: docusign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/docusign
+  direction: third-party
+  category: AI Document Extraction
+  partner_url: https://go.docusign.com/trial/us-goog-trynow-display-zapier/
+- partner_name: CallRail
+  partner: callrail
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/callrail
+  direction: third-party
+  category: Call Tracking
+  partner_url: https://www.callrail.com/?utm_medium=strategicpartner&utm_source=zapier&utm_campaign=app_listing&utm_content=app_listing
+templates:
+- title: Create StreetFair neighborhood offers for new Housecall Pro scheduled jobs
+  url: https://zapier.com/apps/housecall-pro/integrations/streetfair/1681851/create-streetfair-neighborhood-offers-for-new-housecall-pro-scheduled-jobs
+  apps:
+  - housecall-pro
+  - streetfair
+- title: Add Contact to Customer List With Email in Google Ads for New Scheduled Job in Housecall Pro
+  url: https://zapier.com/apps/google-ads/integrations/housecall-pro/1007920/add-contact-to-customer-list-with-email-in-google-ads-for-new-scheduled-job-in-housecall-pro
+  apps:
+  - housecall-pro
+  - google-ads
+- title: Send new scheduled jobs from Housecall Pro to Google Ads as offline conversions
+  url: https://zapier.com/apps/google-ads/integrations/housecall-pro/1648528/send-new-scheduled-jobs-from-housecall-pro-to-google-ads-as-offline-conversions
+  apps:
+  - housecall-pro
+  - google-ads
+- title: Create Housecall Pro customers from new Jotform submissions
+  url: https://zapier.com/apps/housecall-pro/integrations/jotform/1276149/create-housecall-pro-customers-from-new-jotform-submissions
+  apps:
+  - jotform
+  - housecall-pro
+- title: Add Mailchimp subscribers after new HouseCall Pro jobs are complete
+  url: https://zapier.com/apps/housecall-pro/integrations/mailchimp/229547/add-mailchimp-subscribers-after-new-housecall-pro-jobs-are-complete
+  apps:
+  - housecall-pro
+  - mailchimp
+- title: Create Customer in Housecall Pro for new lead form entries in Google Ads
+  url: https://zapier.com/apps/google-ads/integrations/housecall-pro/1005051/create-customer-in-housecall-pro-for-new-lead-form-entries-in-google-ads
+  apps:
+  - google-ads
+  - housecall-pro
+- title: Add new HouseCall Pro jobs to rows in Google Sheets spreadsheets
+  url: https://zapier.com/apps/google-sheets/integrations/housecall-pro/229519/add-new-housecall-pro-jobs-to-rows-in-google-sheets-spreadsheets
+  apps:
+  - housecall-pro
+  - google-sheets
+- title: Create SendJim contacts from newly-completed Housecall Pro jobs
+  url: https://zapier.com/apps/housecall-pro/integrations/sendjim/361727/create-sendjim-contacts-from-newly-completed-housecall-pro-jobs
+  apps:
+  - housecall-pro
+  - sendjim
+- title: Add contacts in Levitate for new scheduled jobs Housecall Pro
+  url: https://zapier.com/apps/housecall-pro/integrations/levitate/1823712/add-contacts-in-levitate-for-new-scheduled-jobs-housecall-pro
+  apps:
+  - housecall-pro
+  - levitate
+- title: Create new Housecall Pro customers from Facebook Lead Ads leads
+  url: https://zapier.com/apps/facebook-lead-ads/integrations/housecall-pro/1221004/create-new-housecall-pro-customers-from-facebook-lead-ads-leads
+  apps:
+  - facebook-lead-ads
+  - housecall-pro
+- title: Create new HeyPros work orders from new scheduled jobs in Housecall Pro
+  url: https://zapier.com/apps/heypros/integrations/housecall-pro/255644389/create-new-heypros-work-orders-from-new-scheduled-jobs-in-housecall-pro
+  apps:
+  - housecall-pro
+  - heypros
+- title: Generate new WhatConverts leads from new Housecall Pro scheduled jobs
+  url: https://zapier.com/apps/housecall-pro/integrations/whatconverts/1597530/generate-new-whatconverts-leads-from-new-housecall-pro-scheduled-jobs
+  apps:
+  - housecall-pro
+  - whatconverts
+template_total: 480
