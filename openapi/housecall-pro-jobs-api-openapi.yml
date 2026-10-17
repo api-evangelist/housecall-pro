@@ -161,44 +161,6 @@ components:
           type: object
           additionalProperties:
             type: boolean
-    Customer:
-      type: object
-      properties:
-        id:
-          type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-        email:
-          type: string
-          format: email
-        mobile_number:
-          type: string
-        home_number:
-          type: string
-        work_number:
-          type: string
-        company:
-          type: string
-        notifications_enabled:
-          type: boolean
-        lead_source:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
-        addresses:
-          type: array
-          items:
-            $ref: '#/components/schemas/Address'
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
     Job:
       type: object
       properties:
@@ -288,6 +250,44 @@ components:
           type: string
         country:
           type: string
+    Customer:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        mobile_number:
+          type: string
+        home_number:
+          type: string
+        work_number:
+          type: string
+        company:
+          type: string
+        notifications_enabled:
+          type: boolean
+        lead_source:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
   securitySchemes:
     bearerAuth:
       type: http

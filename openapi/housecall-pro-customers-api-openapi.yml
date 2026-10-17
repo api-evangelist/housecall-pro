@@ -123,6 +123,28 @@ paths:
           description: Customer deleted.
 components:
   schemas:
+    Address:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+          - billing
+          - service
+        street:
+          type: string
+        street_line_2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
     Customer:
       type: object
       properties:
@@ -161,28 +183,6 @@ components:
         updated_at:
           type: string
           format: date-time
-    Address:
-      type: object
-      properties:
-        id:
-          type: string
-        type:
-          type: string
-          enum:
-          - billing
-          - service
-        street:
-          type: string
-        street_line_2:
-          type: string
-        city:
-          type: string
-        state:
-          type: string
-        zip:
-          type: string
-        country:
-          type: string
   securitySchemes:
     bearerAuth:
       type: http

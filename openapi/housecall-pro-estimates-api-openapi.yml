@@ -70,42 +70,28 @@ paths:
                 $ref: '#/components/schemas/Estimate'
 components:
   schemas:
-    Estimate:
+    Address:
       type: object
       properties:
         id:
           type: string
-        estimate_number:
-          type: string
-        work_status:
-          type: string
-        customer:
-          $ref: '#/components/schemas/Customer'
-        address:
-          $ref: '#/components/schemas/Address'
-        total_amount:
-          type: integer
-        approval_status:
+        type:
           type: string
           enum:
-          - pro_approved
-          - customer_approved
-          - declined
-          - pending
-        options:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              name:
-                type: string
-              total_amount:
-                type: integer
-        created_at:
+          - billing
+          - service
+        street:
           type: string
-          format: date-time
+        street_line_2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
     Customer:
       type: object
       properties:
@@ -144,28 +130,42 @@ components:
         updated_at:
           type: string
           format: date-time
-    Address:
+    Estimate:
       type: object
       properties:
         id:
           type: string
-        type:
+        estimate_number:
+          type: string
+        work_status:
+          type: string
+        customer:
+          $ref: '#/components/schemas/Customer'
+        address:
+          $ref: '#/components/schemas/Address'
+        total_amount:
+          type: integer
+        approval_status:
           type: string
           enum:
-          - billing
-          - service
-        street:
+          - pro_approved
+          - customer_approved
+          - declined
+          - pending
+        options:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              total_amount:
+                type: integer
+        created_at:
           type: string
-        street_line_2:
-          type: string
-        city:
-          type: string
-        state:
-          type: string
-        zip:
-          type: string
-        country:
-          type: string
+          format: date-time
   securitySchemes:
     bearerAuth:
       type: http
