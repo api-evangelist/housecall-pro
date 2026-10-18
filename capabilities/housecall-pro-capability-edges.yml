@@ -4,6 +4,7 @@ generated_by: planning/capability-mapping/scripts/classify_capabilities.py
 model: claude-opus-5
 frame:
 - HVAC & Building Automation Systems
+- Manufacturing & Industrial
 min_confidence: 0.7
 capability_model:
   source: https://github.com/vincentmakes/turbo-ea-capabilities
@@ -11,7 +12,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 5
+edge_count: 6
 edges:
 - tag: Customers
   spec_file: housecall-pro-customers-api-openapi.yml
@@ -39,6 +40,16 @@ edges:
   evidence: 'POST /estimates  createEstimate  Create Estimate ... schemas: Address, Customer, Estimate'
   reason: Creating and retrieving customer estimates for service work is quoting activity in the lead-to-order
     flow, matching Quote & Configuration Management.
+- tag: Jobs
+  spec_file: housecall-pro-jobs-api-openapi.yml
+  capability_id: BC-1050.30
+  capability_id_l1: BC-1050
+  capability_name: Service Execution Management
+  confidence: 0.72
+  evidence: 'POST /jobs createJob Create Job; schemas: Employee, Customer, Job, Address'
+  reason: Jobs are on-site service visits for home-services trades (HVAC, plumbing, electrical) linking
+    a customer, address and employee — field service execution. Which sub-capability (request capture
+    vs execution) the lifecycle operations target is somewhat ambiguous.
 - tag: Payments
   spec_file: housecall-pro-payments-api-openapi.yml
   capability_id: BC-200.30
