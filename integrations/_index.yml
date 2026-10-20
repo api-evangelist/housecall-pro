@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/google-ads/integrations/housecall-pro/1007920/add-contact-to-customer-list-with-email-in-google-ads-for-new-scheduled-job-in-housecall-pro
   template: https://zapier.com/apps/google-ads/integrations/housecall-pro/1007920/add-contact-to-customer-list-with-email-in-google-ads-for-new-scheduled-job-in-housecall-pro
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-send-new-scheduled-jobs-from-housecall-pro-to-google-ads-as-offline-conversi
@@ -29,6 +30,7 @@
   evidence: https://zapier.com/apps/google-ads/integrations/housecall-pro/1648528/send-new-scheduled-jobs-from-housecall-pro-to-google-ads-as-offline-conversions
   template: https://zapier.com/apps/google-ads/integrations/housecall-pro/1648528/send-new-scheduled-jobs-from-housecall-pro-to-google-ads-as-offline-conversions
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-create-housecall-pro-customers-from-new-jotform-submissions
@@ -43,6 +45,7 @@
   evidence: https://zapier.com/apps/housecall-pro/integrations/jotform/1276149/create-housecall-pro-customers-from-new-jotform-submissions
   template: https://zapier.com/apps/housecall-pro/integrations/jotform/1276149/create-housecall-pro-customers-from-new-jotform-submissions
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-add-mailchimp-subscribers-after-new-housecall-pro-jobs-are-complete
@@ -57,6 +60,7 @@
   evidence: https://zapier.com/apps/housecall-pro/integrations/mailchimp/229547/add-mailchimp-subscribers-after-new-housecall-pro-jobs-are-complete
   template: https://zapier.com/apps/housecall-pro/integrations/mailchimp/229547/add-mailchimp-subscribers-after-new-housecall-pro-jobs-are-complete
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-create-customer-in-housecall-pro-for-new-lead-form-entries-in-google-ads
@@ -71,6 +75,7 @@
   evidence: https://zapier.com/apps/google-ads/integrations/housecall-pro/1005051/create-customer-in-housecall-pro-for-new-lead-form-entries-in-google-ads
   template: https://zapier.com/apps/google-ads/integrations/housecall-pro/1005051/create-customer-in-housecall-pro-for-new-lead-form-entries-in-google-ads
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-add-new-housecall-pro-jobs-to-rows-in-google-sheets-spreadsheets
@@ -85,6 +90,22 @@
   evidence: https://zapier.com/apps/google-sheets/integrations/housecall-pro/229519/add-new-housecall-pro-jobs-to-rows-in-google-sheets-spreadsheets
   template: https://zapier.com/apps/google-sheets/integrations/housecall-pro/229519/add-new-housecall-pro-jobs-to-rows-in-google-sheets-spreadsheets
   source: template
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-add-contacts-in-levitate-for-new-scheduled-jobs-housecall-pro
+  label: Add contacts in Levitate for new scheduled jobs Housecall Pro
+  partner: levitate
+  partner_name: Levitate
+  category: CRM (Customer Relationship Management)
+  use_case: Add contacts in Levitate for new scheduled jobs Housecall Pro
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/levitate/1823712/add-contacts-in-levitate-for-new-scheduled-jobs-housecall-pro
+  template: https://zapier.com/apps/housecall-pro/integrations/levitate/1823712/add-contacts-in-levitate-for-new-scheduled-jobs-housecall-pro
+  source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-create-new-housecall-pro-customers-from-facebook-lead-ads-leads
@@ -99,6 +120,7 @@
   evidence: https://zapier.com/apps/facebook-lead-ads/integrations/housecall-pro/1221004/create-new-housecall-pro-customers-from-facebook-lead-ads-leads
   template: https://zapier.com/apps/facebook-lead-ads/integrations/housecall-pro/1221004/create-new-housecall-pro-customers-from-facebook-lead-ads-leads
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: housecall-pro-generate-new-whatconverts-leads-from-new-housecall-pro-scheduled-jobs
@@ -112,289 +134,8 @@
   evidence: https://zapier.com/apps/housecall-pro/integrations/whatconverts/1597530/generate-new-whatconverts-leads-from-new-housecall-pro-scheduled-jobs
   template: https://zapier.com/apps/housecall-pro/integrations/whatconverts/1597530/generate-new-whatconverts-leads-from-new-housecall-pro-scheduled-jobs
   source: template
+  relationship: ipaas-bridge
   status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-leadconnector
-  label: LeadConnector
-  partner_name: LeadConnector
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/leadconnector
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-gravity-forms
-  label: Gravity Forms
-  partner: gravity-forms
-  partner_name: Gravity Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/gravity-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-gmail
-  label: Gmail
-  partner: gmail
-  partner_name: Gmail
-  category: Email
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/gmail
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-google-calendar
-  label: Google Calendar
-  partner: google-calendar
-  partner_name: Google Calendar
-  category: Calendar
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/google-calendar
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-hubspot
-  label: HubSpot
-  partner: hubspot
-  partner_name: HubSpot
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/hubspot
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-realwork
-  label: RealWork
-  partner_name: RealWork
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/realwork
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-monday-com
-  label: monday.com
-  partner_name: monday.com
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/monday
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-quo
-  label: Quo
-  partner: quo
-  partner_name: Quo
-  category: Phone & SMS
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/quo
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-constant-contact
-  label: Constant Contact
-  partner: constant-contact
-  partner_name: Constant Contact
-  category: Email Newsletters
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/constant-contact
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-wix
-  label: Wix
-  partner: wix
-  partner_name: Wix
-  category: Website Builders
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/wix
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-microsoft-outlook
-  label: Microsoft Outlook
-  partner: microsoft-outlook
-  partner_name: Microsoft Outlook
-  category: Calendar
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/microsoft-outlook
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-pulsem
-  label: pulseM
-  partner_name: pulseM
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/pulsem
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-square
-  label: Square
-  partner: square
-  partner_name: Square
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/square
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-birdeye
-  label: Birdeye
-  partner: birdeye
-  partner_name: Birdeye
-  category: Reviews
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/birdeye
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-facebook-lead-ads-for-business-admins
-  label: Facebook Lead Ads (for Business admins)
-  partner_name: Facebook Lead Ads (for Business admins)
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/facebook-lead-ads-beta
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-ringcentral
-  label: RingCentral
-  partner: ringcentral
-  partner_name: RingCentral
-  category: Phone & SMS
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/ringcentral
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-squarespace-forms
-  label: Squarespace Forms
-  partner: squarespace
-  partner_name: Squarespace Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/squarespace-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-pipedrive
-  label: Pipedrive
-  partner: pipedrive
-  partner_name: Pipedrive
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/pipedrive
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-slack
-  label: Slack
-  partner: slack
-  partner_name: Slack
-  category: Team Chat
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/slack
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-typeform
-  label: Typeform
-  partner: typeform
-  partner_name: Typeform
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/typeform
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-quickbooks-online
-  label: QuickBooks Online
-  partner_name: QuickBooks Online
-  category: Accounting
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/quickbooks
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: housecall-pro-google-forms
-  label: Google Forms
-  partner: google-forms
-  partner_name: Google Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/google-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-docusign
-  label: Docusign
-  partner: docusign
-  partner_name: Docusign
-  category: AI Document Extraction
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/docusign
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: housecall-pro-callrail
-  label: CallRail
-  partner: callrail
-  partner_name: CallRail
-  category: Call Tracking
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/housecall-pro/integrations/callrail
-  source: edge
-  status: pending-generation
   arazzo: null
 - slug: housecall-pro-zapier
   label: Zapier
@@ -420,4 +161,300 @@
     beta: false
     builder: unknown (not in the directory record)
   status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-leadconnector
+  label: LeadConnector
+  partner_name: LeadConnector
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/leadconnector
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: housecall-pro-gravity-forms
+  label: Gravity Forms
+  partner: gravity-forms
+  partner_name: Gravity Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/gravity-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-gmail
+  label: Gmail
+  partner: gmail
+  partner_name: Gmail
+  category: Email
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/gmail
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: housecall-pro-google-calendar
+  label: Google Calendar
+  partner: google-calendar
+  partner_name: Google Calendar
+  category: Calendar
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/google-calendar
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-hubspot
+  label: HubSpot
+  partner: hubspot
+  partner_name: HubSpot
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/hubspot
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-realwork
+  label: RealWork
+  partner_name: RealWork
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/realwork
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: housecall-pro-monday-com
+  label: monday.com
+  partner: monday-com
+  partner_name: monday.com
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/monday
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-quo
+  label: Quo
+  partner: quo
+  partner_name: Quo
+  category: Phone & SMS
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/quo
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-constant-contact
+  label: Constant Contact
+  partner: constant-contact
+  partner_name: Constant Contact
+  category: Email Newsletters
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/constant-contact
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-wix
+  label: Wix
+  partner: wix
+  partner_name: Wix
+  category: Website Builders
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/wix
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-microsoft-outlook
+  label: Microsoft Outlook
+  partner: microsoft-outlook
+  partner_name: Microsoft Outlook
+  category: Calendar
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/microsoft-outlook
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-pulsem
+  label: pulseM
+  partner_name: pulseM
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/pulsem
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: housecall-pro-square
+  label: Square
+  partner: square
+  partner_name: Square
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/square
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-birdeye
+  label: Birdeye
+  partner: birdeye
+  partner_name: Birdeye
+  category: Reviews
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/birdeye
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-facebook-lead-ads-for-business-admins
+  label: Facebook Lead Ads (for Business admins)
+  partner: facebook-lead-ads
+  partner_name: Facebook Lead Ads (for Business admins)
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/facebook-lead-ads-beta
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-ringcentral
+  label: RingCentral
+  partner: ringcentral
+  partner_name: RingCentral
+  category: Phone & SMS
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/ringcentral
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-squarespace-forms
+  label: Squarespace Forms
+  partner: squarespace
+  partner_name: Squarespace Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/squarespace-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-slack
+  label: Slack
+  partner: slack
+  partner_name: Slack
+  category: Team Chat
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/slack
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-typeform
+  label: Typeform
+  partner: typeform
+  partner_name: Typeform
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/typeform
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-google-forms
+  label: Google Forms
+  partner: google-forms
+  partner_name: Google Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/google-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-quickbooks-online
+  label: QuickBooks Online
+  partner: quickbooks
+  partner_name: QuickBooks Online
+  category: Accounting
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/quickbooks
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: housecall-pro-docusign
+  label: Docusign
+  partner: docusign
+  partner_name: Docusign
+  category: AI Document Extraction
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/docusign
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: housecall-pro-callrail
+  label: CallRail
+  partner: callrail
+  partner_name: CallRail
+  category: Call Tracking
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/housecall-pro/integrations/callrail
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
   arazzo: null
