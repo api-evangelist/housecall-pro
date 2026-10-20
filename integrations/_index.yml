@@ -458,3 +458,295 @@
   relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
+- slug: housecall-pro-amazon-alexa
+  label: Amazon Alexa
+  partner: amazon
+  partner_name: Amazon Alexa
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/alexa/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Amazon Alexa
+    matched_domain: amazon.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Amazon Alexa
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: wikidata Q28022144 'Amazon Alexa' P856 https://alexa.amazon.com/ (wikidata P856, labelled provenance
+      step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-fundbox
+  label: Fundbox
+  partner: fundbox
+  partner_name: Fundbox
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/features/fundbox/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Fundbox
+    matched_domain: fundbox.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Fundbox
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: wikidata Q20714717 'Fundbox' P856 http://fundbox.com (wikidata P856, labelled provenance step;
+      Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-thumbtack
+  label: Thumbtack
+  partner: thumbtack
+  partner_name: Thumbtack
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/thumbtack/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Thumbtack
+    matched_domain: thumbtack.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Thumbtack
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: wikidata Q7798846 'Thumbtack' P856 http://www.thumbtack.com/ (wikidata P856, labelled provenance
+      step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-yelp
+  label: Yelp
+  partner: yelp
+  partner_name: Yelp
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/yelp
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Yelp
+    matched_domain: yelp.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Yelp
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: wikidata Q2299611 'Yelp' P856 https://www.yelp.com/ (wikidata P856, labelled provenance step;
+      Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-quickbooks
+  label: QuickBooks
+  partner: quickbooks
+  partner_name: QuickBooks
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/features/quickbooks/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: QuickBooks
+    matched_domain: null
+    matched_by: register-name
+    listings: 1
+    sample_apps:
+    - QuickBooks
+    register_name_note: register-name 'quickbooks' = quickbooks; wikidata P856 intuit.com agrees or unheld
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-wisetack
+  label: Wisetack
+  partner: wisetack
+  partner_name: Wisetack
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/features/consumer-financing/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Wisetack
+    matched_domain: null
+    matched_by: register-name
+    listings: 1
+    sample_apps:
+    - Wisetack
+    register_name_note: register-name 'wisetack' = wisetack; no wikidata P856
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-companycam
+  label: CompanyCam
+  partner: companycam
+  partner_name: CompanyCam
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/company-cam-offer/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: CompanyCam
+    matched_domain: null
+    matched_by: register-name
+    listings: 1
+    sample_apps:
+    - CompanyCam
+    register_name_note: register-name 'companycam' = companycam; no wikidata P856
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-podium
+  label: Podium
+  partner: podium
+  partner_name: Podium
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/podium/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Podium
+    matched_domain: null
+    matched_by: register-name
+    listings: 1
+    sample_apps:
+    - Podium
+    register_name_note: register-name 'podium' = podium; no wikidata P856
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-sign-post
+  label: Sign Post
+  partner: signpost
+  partner_name: Sign Post
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/signpost/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Sign Post
+    matched_domain: null
+    matched_by: register-name
+    listings: 1
+    sample_apps:
+    - Sign Post
+    register_name_note: register-name 'signpost' = signpost; no wikidata P856
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: housecall-pro-angi
+  label: Angi
+  partner: angi
+  partner_name: Angi
+  category: Housecall Pro integration
+  type: marketplace
+  marketplace: own
+  channel: unknown
+  evidence: https://www.housecallpro.com/partner/angi
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Housecall Pro integrations (housecallpro.com/integrations cards; names only)
+    spec_file: null
+    role: housecall-pro-app-builder-unstated
+    registered_name: Angi
+    matched_domain: null
+    matched_by: register-name
+    listings: 1
+    sample_apps:
+    - Angi
+    register_name_note: register-name 'angi' = angi; no wikidata P856
+    signal_note: 'the listing does not state who built the connector: direction unknown, kept out of position shares'
+    detected_by: sweep-field-service.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
